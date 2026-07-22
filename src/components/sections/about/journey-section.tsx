@@ -8,32 +8,32 @@ import { useEffect, useState } from "react";
 
 const journeyTabs = [
     {
-        title: "The Beginning",
-        description: "We introduced our platform with tools designed to simplify saving, budgeting, and managing money effectively.",
-        year: "2021",
-        subtitle: "Launch",
-        image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200", // Using a placeholder unsplash image
-    },
-    {
-        title: "Rapid Growth",
-        description: "Our user base tripled within the first year as we expanded our features to include early access credit cards.",
-        year: "2022",
-        subtitle: "Expansion",
-        image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-        title: "Building Community",
-        description: "We launched our social features, allowing users to share financial tips and growth strategies with each other.",
+        title: "The Problem We Saw",
+        description: "Attorneys and docketing specialists across multiple practice areas told us the same thing: existing tools were either too narrow to cover all their work, or still required too much manual data entry. A missed deadline in legal practice is not a minor error — it can be fatal to a case.",
         year: "2023",
-        subtitle: "Connection",
-        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200",
+        subtitle: "The Insight",
+        image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200",
     },
     {
-        title: "Future Horizons",
-        description: "Integrating AI-driven insights to help users make even smarter financial decisions for long-term wealth.",
+        title: "Building the Foundation",
+        description: "We designed a platform that reads and classifies legal documents across every major practice area — IP prosecution, patent litigation, corporate transactions, immigration, regulatory compliance, and more. The rules engine handles jurisdiction-specific deadline logic automatically.",
         year: "2024",
-        subtitle: "Innovation",
+        subtitle: "Development",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200",
+    },
+    {
+        title: "Adding the AI Layer",
+        description: "We layered natural language search, document summarisation, and daily intelligent briefings on top of the core docketing engine. Each attorney now gets a personalised morning digest with their deadlines, risk flags, and matters requiring attention — in priority order.",
+        year: "2025",
+        subtitle: "Intelligence",
         image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+    },
+    {
+        title: "Serving Law Firms",
+        description: "Clinentora now supports law firms across all major practice areas with dedicated onboarding, data migration from existing systems, and responsive support. Every firm gets the platform configured specifically for the practice areas they handle.",
+        year: "2025+",
+        subtitle: "Growth",
+        image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=1200",
     },
 ];
 
@@ -54,13 +54,13 @@ const JourneySection = () => {
                 <StaggerContainer className="text-center md:max-w-[630px] max-w-xs mx-auto">
                     <AnimateOnView blur once>
                         <h2 className="h2 md:mb-5 mb-3">
-                            The Journey Behind Our Growth
+                            The Journey Behind Clinentora
                         </h2>
                     </AnimateOnView>
 
                     <AnimateOnView blur once delay={0.1}>
                         <p className="text-muted-foreground">
-                            Our growth reflects one mission — helping people and companies achieve financial confidence with clarity and ease.
+                            Built after direct conversations with attorneys and docketing specialists who knew exactly where existing tools fell short.
                         </p>
                     </AnimateOnView>
                 </StaggerContainer>
@@ -93,8 +93,9 @@ const JourneySection = () => {
                                     {journeyTabs.map((_, index) => (
                                         <div
                                             key={index}
+                                            onClick={() => setActiveTab(index)}
                                             className={cn(
-                                                "h-2 rounded-full transition-all duration-500",
+                                                "h-2 rounded-full transition-all duration-500 cursor-pointer",
                                                 activeTab === index ? "w-8 bg-white" : "w-2 bg-white/20"
                                             )}
                                         />

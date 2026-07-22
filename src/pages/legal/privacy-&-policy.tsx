@@ -9,7 +9,7 @@ const PrivacyPolicyPage = () => {
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": `Privacy & Policy | ${appConfig.name}`,
+        "name": `Privacy Policy | ${appConfig.name}`,
         "description": `${appConfig.description}`,
         "url": `${appConfig.url}/legal/privacy-&-policy`
     };
@@ -17,7 +17,7 @@ const PrivacyPolicyPage = () => {
     return (
         <>
             <SEO
-                title={`Privacy & Policy | ${appConfig.name}`}
+                title={`Privacy Policy | ${appConfig.name}`}
                 description={`${appConfig.description}`}
                 canonicalUrl={`/legal/privacy-&-policy`}
                 ogType="website"
@@ -25,62 +25,64 @@ const PrivacyPolicyPage = () => {
             />
             <Layout>
                 <LegalHero
-                    title={`Privacy & Policy`}
-                    description={`Privacy & Policy | Revio - Legal`}
+                    title={`Privacy Policy`}
+                    description={`Privacy Policy | Clinentora - Legal`}
                 />
                 <section>
                     <Container className="flex flex-col lg:flex-row justify-center md:gap-10 gap-6 py-[60px]">
                         {/* Main Content Column */}
                         <article className="max-w-[1030px]">
                             <p className="lead text-xl text-muted-foreground md:mb-8 mb-4">
-                                In the rapidly evolving landscape of digital commerce, payment gateways have emerged as the unsung heroes, silently powering the transactions that drive the global economy.
+                                At Clinentora, we understand that legal matter data is among the most sensitive information any firm handles. Client identities, litigation strategy, regulatory exposure, and intellectual property must be rigorously protected.
                             </p>
-                            <h3 className="mb-2">The backbone of global expansion</h3>
-                            <p>
-                                Gone are the days when online transactions were clumsy and insecure. Today, modern payment gateways offer seamless, encrypted, and instant processing capabilities that have democratized access to global markets for businesses of all sizes.
-                            </p>
-
+                            
+                            <h3 className="mb-2">Data Protection as a Core Principle</h3>
                             <p className="md:mb-8 mb-4">
-                                From simple credit card processing to integrating digital wallets and cryptocurrencies, the scope of what a payment gateway handles has expanded dramatically. This evolution is not just about technology; it's about customer experience.
+                                Clinentora is built with data responsibility at its core. This Privacy Policy explains how we collect, use, and safeguard the information you entrust to our docketing platform.
                             </p>
 
-                            <h3 className="mb-2">Security: Where trust meets technology</h3>
+                            <h3 className="mb-2">Information We Collect</h3>
                             <p className="mb-4">
-                                Consumers demand speed and security. A study shows that 40% of users abandon their cart if the checkout process is too complicated. Payment gateways solve this by offering one-click checkouts and biometric authentication.
+                                We collect information in the following categories:
+                                <ul className="list-disc pl-6 mt-2 space-y-1">
+                                    <li><strong>Account Data:</strong> Usernames, email addresses, and firm details required to provision your account.</li>
+                                    <li><strong>Matter Data:</strong> The legal documents, filings, and case information you upload or connect via email and agency feeds.</li>
+                                    <li><strong>Usage Data:</strong> Audit logs of system access, edits, and deadline changes to maintain a permanent record for supervision and compliance.</li>
+                                </ul>
                             </p>
 
-                            <blockquote className="md:mb-8 mb-4">
-                                "The future of commerce is frictionless. Payment gateways are the oil in the engine of the digital economy."
+                            <h3 className="mb-2">How We Use Your Information</h3>
+                            <p className="md:mb-8 mb-4">
+                                Your matter data is used strictly to deliver the Clinentora service to your firm. We process documents to extract dates, calculate deadlines, and provide AI-powered summaries. 
+                            </p>
+
+                            <blockquote className="md:mb-8 mb-4 border-l-4 border-primary pl-4 italic text-muted-foreground">
+                                "Your matter data is never used to train shared AI models, never shared with other firms, and never used for any purpose beyond delivering the Clinentora service to you."
                             </blockquote>
 
-                            <h3 className="mb-2">The growth of global online payments</h3>
+                            <h3 className="mb-2">Security Measures</h3>
                             <p className="md:mb-8 mb-4">
-                                As we move forward, AI-driven fraud detection and decentralized finance (DeFi) integrations are set to redefine the standards again. Businesses that adapt to these changes will lead the charge in the next decade of digital innovation.
+                                We implement industry-leading security protocols to protect your data. All data is encrypted in transit using TLS 1.3 and at rest using AES-256 encryption. We support Role-Based Access Control (RBAC) so attorneys, paralegals, support staff, and clients only see what they need. Multi-Factor Authentication (MFA) is available across all user accounts.
                             </p>
 
-                            <h3 className="mb-2">Greater flexibility & payment choices</h3>
+                            <h3 className="mb-2">Data Residency and Retention</h3>
                             <p className="md:mb-8 mb-4">
-                                The modern payment gateway ecosystem offers unprecedented flexibility, allowing businesses to accept payments from multiple sources including credit cards, digital wallets, bank transfers, and emerging cryptocurrencies.
+                                We offer data residency options for firms with jurisdictional or client-imposed data location requirements. We retain your matter data for as long as your account is active, and you can request full deletion of your data upon termination of your agreement with us.
                             </p>
 
-                            <h3 className="mb-2">Why flexibility matters</h3>
+                            <h3 className="mb-2">Third-Party Subprocessors</h3>
                             <p className="md:mb-8 mb-4">
-                                In today's global marketplace, customers expect to pay using their preferred method. Payment gateways that offer diverse payment options see higher conversion rates and customer satisfaction.
+                                We may use trusted third-party infrastructure providers to host our application. All subprocessors are strictly vetted for compliance with global security and privacy standards and are bound by strict confidentiality agreements.
                             </p>
 
-                            <h3 className="mb-2">Backbone of global online transactions</h3>
+                            <h3 className="mb-2">Changes to this Policy</h3>
                             <p className="md:mb-8 mb-4">
-                                Payment gateways serve as the critical infrastructure that enables businesses to operate across borders, handling currency conversions, compliance, and regulatory requirements seamlessly.
+                                We may update this Privacy Policy from time to time as our platform evolves. We will notify you of any material changes via email or an in-app notification before the changes take effect.
                             </p>
 
-                            <h3 className="mb-2">How payment gateways empower digital commerce</h3>
-                            <p className="md:mb-8 mb-4">
-                                By providing secure, fast, and reliable transaction processing, payment gateways remove the technical barriers that once prevented small businesses from competing on a global scale.
-                            </p>
-
-                            <h3 className="mb-2">Conclusion: The currency of innovation</h3>
+                            <h3 className="mb-2">Contact Us</h3>
                             <p>
-                                As digital commerce continues to evolve, payment gateways will remain at the forefront of innovation, enabling new business models and transforming how we think about money and transactions in the digital age.
+                                Full data processing terms are available for review by your firm's IT, risk, and general counsel teams before onboarding begins. For any questions regarding this Privacy Policy, please contact our Data Protection Officer at privacy@clinentora.com.
                             </p>
                         </article>
                     </Container>

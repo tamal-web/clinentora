@@ -18,20 +18,20 @@ const team = [
     bio: "Leads engineering across document intelligence, jurisdiction rules, and security. Focused on making automation reliable enough for consequential deadlines.",
     linkedin: "https://linkedin.com/in/tamalkrish",
   },
-  {
-    img: "/images/common/members/abhinandan.webp",
-    name: "Abhinandan Sambyal",
-    title: "CMO & Marketing Director",
-    bio: "Leads marketing strategy, brand development, and go-to-market execution.",
-    linkedin: "https://linkedin.com/in/abhinandan-sambyal",
-  },
-  {
-    img: "/images/common/members/rojal.webp",
-    name: "Rojal",
-    title: "Project Manager",
-    bio: "Manages product delivery, cross-team coordination, and operational execution.",
-    linkedin: "https://linkedin.com/in/rojal-2006-",
-  },
+  // {
+  //   img: "/images/common/members/abhinandan.webp",
+  //   name: "Abhinandan Sambyal",
+  //   title: "CMO & Marketing Director",
+  //   bio: "Leads marketing strategy, brand development, and go-to-market execution.",
+  //   linkedin: "https://linkedin.com/in/abhinandan-sambyal",
+  // },
+  // {
+  //   img: "/images/common/members/rojal.webp",
+  //   name: "Rojal",
+  //   title: "Project Manager",
+  //   bio: "Manages product delivery, cross-team coordination, and operational execution.",
+  //   linkedin: "https://linkedin.com/in/rojal-2006-",
+  // },
 ];
 
 const Team = () => {

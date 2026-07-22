@@ -42,13 +42,23 @@ const App = () => (
               <Route path="/feature" element={<Feature />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/pricing" element={<Pricing />} />
+              {/*
+                  <Route path="/pricing" element={<Pricing />} />
               <Route path="/pricing/starter" element={<StarterPricing />} />
-              <Route path="/pricing/professional" element={<ProfessionalPricing />} />
+              */}
+              <Route
+                path="/pricing/professional"
+                element={<ProfessionalPricing />}
+              />
+              {/*
+
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/integration" element={<Integration />} />
-              <Route path="/integration/:slug" element={<IntegrationDetailsPage />} />
+              <Route
+                path="/integration/:slug"
+                element={<IntegrationDetailsPage />}
+              />
               <Route path="/early-access" element={<EarlyAccess />} />
               <Route path="/dashboard/profile" element={<ProfilePage />} />
               <Route path="/dashboard/blog" element={<BlogDashboard />} />
@@ -56,9 +66,20 @@ const App = () => (
               <Route path="/dashboard/blog/edit/:id" element={<BlogEditor />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/signup" element={<SignupPage />} />
-              <Route path="/legal/terms-&-condition" element={<TermsAndConditionPage />} />
-              <Route path="/legal/privacy-policy" element={<PrivacyPolicyPage />} />
-              <Route path="/legal/cookie-policy" element={<CookiePolicyPage />} />
+                            */}
+
+              <Route
+                path="/legal/terms-&-condition"
+                element={<TermsAndConditionPage />}
+              />
+              <Route
+                path="/legal/privacy-policy"
+                element={<PrivacyPolicyPage />}
+              />
+              <Route
+                path="/legal/cookie-policy"
+                element={<CookiePolicyPage />}
+              />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AuthProvider>

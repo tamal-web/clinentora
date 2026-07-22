@@ -2,20 +2,32 @@
 import Container from "@/components/container";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
+import { Linkedin, Mail } from "lucide-react";
 
 const teamMembers = [
-    { name: "Albert Flores", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100" },
-    { name: "Wade Warren", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100" },
-    { name: "Annette Black", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" },
-    { name: "Annette Black", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" },
-    { name: "Esther Howard", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100" },
-    { name: "Jane Cooper", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" },
-    { name: "Robert Fox", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&q=80&w=100" },
-    { name: "Robert Fox", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100" },
-    { name: "Devon Lane", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&q=80&w=100" },
-    { name: "Kristin Watson", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" },
-    { name: "Ralph Edwards", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100" },
-    { name: "Ralph Edwards", title: "Chief Executive Officer", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100" },
+    {
+        name: "Sukhmanjeet Singh",
+        title: "Co-Founder & Chief Executive Officer",
+        avatar: "/images/common/members/sukhman.webp",
+        email: "sukhman@clinentora.com",
+        linkedin: "https://linkedin.com/in/sukhmanjeet-singh-642a63258",
+        bio: "Leads Clinentora's product vision and firm relationships. Responsible for strategy, partnerships, and ensuring the platform solves the real operational problems of legal practice.",
+    },
+    {
+        name: "Tamal Krishna Chhabra",
+        title: "Co-Founder & Chief Technology Officer",
+        avatar: "/images/common/members/tamal.webp",
+        email: "tamal@clinentora.com",
+        linkedin: "https://linkedin.com/in/tamalkrishn",
+        bio: "Leads the architecture and engineering behind Clinentora's document intelligence engine, multi-domain rules system, and security infrastructure.",
+    },
+    {
+        name: "Karol Wilder",
+        title: "IP Docketing Advisor",
+        avatar: "/images/common/members/karol.webp",
+        linkedin: "https://linkedin.com/in/karol-wilder-b521ab103",
+        bio: "35+ years of IP docketing and paralegal experience across major pharmaceutical and life sciences companies, including Eli Lilly, Bayer, MilliporeSigma, and Pfizer.",
+    },
 ];
 
 const TeamGrid = () => {
@@ -25,35 +37,68 @@ const TeamGrid = () => {
                 <StaggerContainer className="text-center md:max-w-[630px] max-w-xs mx-auto">
                     <AnimateOnView blur>
                         <h2 className="h2 md:mb-5 mb-3">
-                            Trusted by high growth teams
+                            The Team Behind Clinentora
                         </h2>
                     </AnimateOnView>
 
                     <AnimateOnView blur delay={0.1}>
                         <p className="text-muted-foreground">
-                            Our growth reflects one mission — helping people and companies achieve financial confidence with clarity and ease.
+                            Built by practitioners who spoke directly with attorneys, docketing specialists, and paralegals about where existing tools consistently fell short.
                         </p>
                     </AnimateOnView>
                 </StaggerContainer>
 
-                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:gap-8 gap-6">
                     {teamMembers.map((member, index) => (
                         <AnimateOnView
                             key={index}
-                            className="p-4 rounded-2xl bg-card border border-border flex flex-col md:flex-row text-center md:text-left items-center gap-4 transition-all duration-300 hover:bg-white/5"
+                            className="p-6 rounded-2xl bg-card border border-border flex flex-col gap-5 transition-all duration-300 hover:border-white/10 group"
                         >
-                            <img
-                                src={member.avatar}
-                                alt={member.name}
-                                className="w-12 h-12 rounded-[10px] object-cover"
-                            />
-                            <div className="flex flex-col min-w-0">
-                                <span className="text-white font-medium truncate">{member.name}</span>
-                                <span className="text-xs text-muted-foreground truncate">{member.title}</span>
+                            <div className="flex items-center gap-4">
+                                <img
+                                    src={member.avatar}
+                                    alt={member.name}
+                                    className="w-16 h-16 rounded-xl object-cover object-top"
+                                />
+                                <div className="flex flex-col min-w-0">
+                                    <span className="text-white font-semibold">{member.name}</span>
+                                    <span className="text-xs text-muted-foreground leading-snug mt-0.5">{member.title}</span>
+                                </div>
+                            </div>
+                            <p className="text-sm text-muted-foreground leading-relaxed">{member.bio}</p>
+                            <div className="flex items-center gap-3 mt-auto pt-2 border-t border-border">
+                                {member.email && (
+                                    <a
+                                        href={`mailto:${member.email}`}
+                                        className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-white transition-colors"
+                                    >
+                                        <Mail className="w-3.5 h-3.5" />
+                                        {member.email}
+                                    </a>
+                                )}
+                                <a
+                                    href={member.linkedin}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="ml-auto w-7 h-7 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors"
+                                    aria-label={`${member.name} LinkedIn`}
+                                >
+                                    <Linkedin className="w-3.5 h-3.5 text-white/70" />
+                                </a>
                             </div>
                         </AnimateOnView>
                     ))}
                 </div>
+
+                {/* Quote */}
+                <AnimateOnView blur delay={0.2}>
+                    <blockquote className="text-center max-w-2xl mx-auto border border-border rounded-2xl p-8 bg-card">
+                        <p className="text-lg text-muted-foreground italic leading-relaxed mb-4">
+                            "We built Clinentora because we kept hearing the same thing from attorneys across every kind of practice: the tools they had were either too narrow, or still required too much manual work. We built the platform we wished existed."
+                        </p>
+                        <cite className="text-sm text-white font-medium not-italic">— Clinentora Co-Founders</cite>
+                    </blockquote>
+                </AnimateOnView>
             </Container>
         </section>
     );

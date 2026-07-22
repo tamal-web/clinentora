@@ -9,22 +9,22 @@ import { Link } from "react-router-dom";
 const ConfidenceSection = () => {
     const stats = [
         {
-            label: "Automated financial growth",
-            value: "150%",
-            description: "of manual work eliminated",
-            icon: "📈",
-        },
-        {
-            label: "Transaction security",
+            label: "Deadline compliance",
             value: "99.9%",
-            description: "fraud prevention accuracy across all payments",
-            icon: "🔒",
+            description: "accuracy across all matters and practice areas — consistently maintained",
+            icon: "🎯",
         },
         {
-            label: "Trusted by businesses",
-            value: "10K+",
-            description: "companies manage their finances with us",
-            icon: "🏢",
+            label: "Practice areas covered",
+            value: "10+",
+            description: "natively supported — IP, litigation, corporate, regulatory, and more",
+            icon: "⚖️",
+        },
+        {
+            label: "Manual work eliminated",
+            value: "80%+",
+            description: "of manual data entry removed through automatic document processing",
+            icon: "⚡",
         },
     ];
 
@@ -34,32 +34,32 @@ const ConfidenceSection = () => {
                 <StaggerContainer className="text-center md:max-w-2xl max-w-sm mx-auto">
                     <AnimateOnView blur once>
                         <h2 className="h2 md:mb-5 mb-3">
-                            Bank Complete Confidence
+                            Docket With Confidence
                         </h2>
                     </AnimateOnView>
 
                     <AnimateOnView blur once delay={0.1}>
                         <p className="text-muted-foreground md:mb-8 mb-5">
-                            The revenue platform modern finance teams were waiting for
+                            The docketing platform modern law firms have been waiting for — built to handle every practice area without gaps or workarounds.
                         </p>
                     </AnimateOnView>
 
                     <AnimateOnView y={20} once delay={0.2} className="flex flex-col items-center gap-4">
                         <Button asChild>
                             <Link to="/contact">
-                                Get started for free
+                                Request a Demo
                             </Link>
                         </Button>
 
                         <div className="mt-4 flex flex-col items-center gap-2">
-                            <span className="text-xs text-muted-foreground">10 invoices trial, no credit card needed</span>
+                            <span className="text-xs text-muted-foreground">No commitment required — see it working with your documents</span>
                             <div className="flex items-center gap-2">
                                 <div className="flex">
                                     {[1, 2, 3, 4, 5].map((star) => (
                                         <Star key={star} className="w-4 h-4 text-orange-500 fill-orange-500" />
                                     ))}
                                 </div>
-                                <span className="text-sm text-white font-medium">4.5 Reviews</span>
+                                <span className="text-sm text-white font-medium">Trusted by Legal Teams</span>
                             </div>
                         </div>
                     </AnimateOnView>
@@ -89,3 +89,4 @@ const ConfidenceSection = () => {
 };
 
 export default ConfidenceSection;
+

@@ -6,65 +6,54 @@ const CookiePolicyPage = () => {
 
     return (
         <>
-
             <Layout>
                 <LegalHero
                     title={`Cookie Policy`}
-                    description={`kkdfjkdjf`}
+                    description={`Learn how Clinentora uses cookies.`}
                 />
                 <section>
                     <Container className="flex flex-col lg:flex-row justify-center md:gap-10 gap-6 md:py-[60px] py-12">
                         {/* Main Content Column */}
                         <article className="max-w-[1030px]">
                             <p className="lead text-xl text-muted-foreground md:mb-8 mb-4">
-                                In the rapidly evolving landscape of digital commerce, payment gateways have emerged as the unsung heroes, silently powering the transactions that drive the global economy.
+                                Clinentora ("we", "our", or "us") uses cookies and similar tracking technologies to ensure our legal docketing platform functions securely and efficiently.
                             </p>
-                            <h3 className="mb-2">The backbone of global expansion</h3>
-                            <p>
-                                Gone are the days when online transactions were clumsy and insecure. Today, modern payment gateways offer seamless, encrypted, and instant processing capabilities that have democratized access to global markets for businesses of all sizes.
-                            </p>
-
+                            
+                            <h3 className="mb-2">What are Cookies?</h3>
                             <p className="md:mb-8 mb-4">
-                                From simple credit card processing to integrating digital wallets and cryptocurrencies, the scope of what a payment gateway handles has expanded dramatically. This evolution is not just about technology; it's about customer experience.
+                                Cookies are small text files that are stored on your device when you visit our website or use our application. They help us remember your preferences, keep your session secure, and understand how our platform is being used so we can improve it.
                             </p>
 
-                            <h3 className="mb-2">Security: Where trust meets technology</h3>
+                            <h3 className="mb-2">Types of Cookies We Use</h3>
+                            
+                            <h4 className="text-lg font-medium mt-4 mb-2">1. Essential Cookies</h4>
                             <p className="mb-4">
-                                Consumers demand speed and security. A study shows that 40% of users abandon their cart if the checkout process is too complicated. Payment gateways solve this by offering one-click checkouts and biometric authentication.
+                                These cookies are strictly necessary to provide you with services available through our platform and to use some of its features, such as secure login, multi-factor authentication, and maintaining your session state. Without these cookies, our application cannot function properly.
                             </p>
-
-                            <blockquote className="md:mb-8 mb-4">
-                                "The future of commerce is frictionless. Payment gateways are the oil in the engine of the digital economy."
-                            </blockquote>
-
-                            <h3 className="mb-2">The growth of global online payments</h3>
+                            
+                            <h4 className="text-lg font-medium mt-4 mb-2">2. Performance and Analytics Cookies</h4>
+                            <p className="mb-4">
+                                We use these cookies to collect information about how law firms and attorneys interact with Clinentora. This helps us understand which features are most useful, identify operational bottlenecks, and continuously improve the performance of our docketing engine. All data collected is aggregated and anonymized.
+                            </p>
+                            
+                            <h4 className="text-lg font-medium mt-4 mb-2">3. Functionality Cookies</h4>
                             <p className="md:mb-8 mb-4">
-                                As we move forward, AI-driven fraud detection and decentralized finance (DeFi) integrations are set to redefine the standards again. Businesses that adapt to these changes will lead the charge in the next decade of digital innovation.
+                                These cookies allow us to remember choices you make when you use our platform, such as your customized dashboard views, practice area preferences, and notification settings. The purpose of these cookies is to provide you with a more personal experience and to avoid you having to re-enter your preferences every time you use our platform.
                             </p>
 
-                            <h3 className="mb-2">Greater flexibility & payment choices</h3>
+                            <h3 className="mb-2">Your Choices Regarding Cookies</h3>
                             <p className="md:mb-8 mb-4">
-                                The modern payment gateway ecosystem offers unprecedented flexibility, allowing businesses to accept payments from multiple sources including credit cards, digital wallets, bank transfers, and emerging cryptocurrencies.
+                                You have the right to decide whether to accept or reject non-essential cookies. You can set or amend your web browser controls to accept or refuse cookies. If you choose to reject cookies, you may still use our platform, though your access to some functionality and areas may be restricted. Essential cookies cannot be rejected as they are strictly necessary for the secure operation of our legal software.
                             </p>
 
-                            <h3 className="mb-2">Why flexibility matters</h3>
+                            <h3 className="mb-2">Updates to this Policy</h3>
                             <p className="md:mb-8 mb-4">
-                                In today's global marketplace, customers expect to pay using their preferred method. Payment gateways that offer diverse payment options see higher conversion rates and customer satisfaction.
+                                We may update this Cookie Policy from time to time in order to reflect changes to the cookies we use or for other operational, legal, or regulatory reasons. Please revisit this page regularly to stay informed about our use of cookies and related technologies.
                             </p>
 
-                            <h3 className="mb-2">Backbone of global online transactions</h3>
-                            <p className="md:mb-8 mb-4">
-                                Payment gateways serve as the critical infrastructure that enables businesses to operate across borders, handling currency conversions, compliance, and regulatory requirements seamlessly.
-                            </p>
-
-                            <h3 className="mb-2">How payment gateways empower digital commerce</h3>
-                            <p className="md:mb-8 mb-4">
-                                By providing secure, fast, and reliable transaction processing, payment gateways remove the technical barriers that once prevented small businesses from competing on a global scale.
-                            </p>
-
-                            <h3 className="mb-2">Conclusion: The currency of innovation</h3>
+                            <h3 className="mb-2">Contact Us</h3>
                             <p>
-                                As digital commerce continues to evolve, payment gateways will remain at the forefront of innovation, enabling new business models and transforming how we think about money and transactions in the digital age.
+                                If you have any questions about our use of cookies or other technologies, please email us at privacy@clinentora.com.
                             </p>
                         </article>
                     </Container>

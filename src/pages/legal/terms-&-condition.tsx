@@ -15,65 +15,61 @@ const TermsAndConditionPage = () => {
 
     return (
         <>
-
             <Layout>
                 <LegalHero
                     title={`Terms & Conditions`}
-                    description={`Terms & Conditions | Revio - Legal`}
+                    description={`Terms & Conditions | Clinentora - Legal`}
                 />
                 <section>
                     <Container className="flex flex-col lg:flex-row justify-center md:gap-10 gap-6 py-[60px]">
                         {/* Main Content Column */}
                         <article className="max-w-[1030px]">
                             <p className="lead text-xl text-muted-foreground md:mb-8 mb-4">
-                                In the rapidly evolving landscape of digital commerce, payment gateways have emerged as the unsung heroes, silently powering the transactions that drive the global economy.
+                                Welcome to Clinentora. These Terms and Conditions govern your use of our legal docketing platform and related services.
                             </p>
-                            <h3 className="mb-2">The backbone of global expansion</h3>
-                            <p>
-                                Gone are the days when online transactions were clumsy and insecure. Today, modern payment gateways offer seamless, encrypted, and instant processing capabilities that have democratized access to global markets for businesses of all sizes.
-                            </p>
-
+                            
+                            <h3 className="mb-2">1. Acceptance of Terms</h3>
                             <p className="md:mb-8 mb-4">
-                                From simple credit card processing to integrating digital wallets and cryptocurrencies, the scope of what a payment gateway handles has expanded dramatically. This evolution is not just about technology; it's about customer experience.
+                                By accessing or using the Clinentora platform, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services. Clinentora provides automated document processing, docketing workflow management, and AI-powered intelligence for law firms and legal departments.
                             </p>
 
-                            <h3 className="mb-2">Security: Where trust meets technology</h3>
+                            <h3 className="mb-2">2. Service Description</h3>
                             <p className="mb-4">
-                                Consumers demand speed and security. A study shows that 40% of users abandon their cart if the checkout process is too complicated. Payment gateways solve this by offering one-click checkouts and biometric authentication.
+                                Clinentora is a cloud-based legal docketing software that handles document intake, deadline calculation, and jurisdiction-specific rules across multiple practice areas. We provide tools for timeline extraction, natural language search, and automated reporting.
                             </p>
 
-                            <blockquote className="md:mb-8 mb-4">
-                                "The future of commerce is frictionless. Payment gateways are the oil in the engine of the digital economy."
+                            <blockquote className="md:mb-8 mb-4 border-l-4 border-primary pl-4 italic text-muted-foreground">
+                                "While Clinentora calculates deadlines based on jurisdictional rules, it is the ultimate responsibility of the legal professionals using the platform to review and confirm all docket entries and deadlines before saving."
                             </blockquote>
 
-                            <h3 className="mb-2">The growth of global online payments</h3>
+                            <h3 className="mb-2">3. User Responsibilities</h3>
                             <p className="md:mb-8 mb-4">
-                                As we move forward, AI-driven fraud detection and decentralized finance (DeFi) integrations are set to redefine the standards again. Businesses that adapt to these changes will lead the charge in the next decade of digital innovation.
+                                You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to ensure that all data uploaded to Clinentora complies with applicable legal and ethical obligations regarding client confidentiality.
                             </p>
 
-                            <h3 className="mb-2">Greater flexibility & payment choices</h3>
+                            <h3 className="mb-2">4. Data Security and Confidentiality</h3>
                             <p className="md:mb-8 mb-4">
-                                The modern payment gateway ecosystem offers unprecedented flexibility, allowing businesses to accept payments from multiple sources including credit cards, digital wallets, bank transfers, and emerging cryptocurrencies.
+                                We treat your matter data with the utmost security. Client data is encrypted in transit and at rest. We do not use your confidential matter data to train shared AI models, nor do we share it with other law firms or third parties beyond the scope of providing the Clinentora service to you.
                             </p>
 
-                            <h3 className="mb-2">Why flexibility matters</h3>
+                            <h3 className="mb-2">5. Service Availability</h3>
                             <p className="md:mb-8 mb-4">
-                                In today's global marketplace, customers expect to pay using their preferred method. Payment gateways that offer diverse payment options see higher conversion rates and customer satisfaction.
+                                We strive to provide continuous uptime and reliable infrastructure. However, Clinentora does not guarantee that the service will be uninterrupted or error-free. We perform daily automated backups to prevent data loss.
                             </p>
 
-                            <h3 className="mb-2">Backbone of global online transactions</h3>
+                            <h3 className="mb-2">6. Limitation of Liability</h3>
                             <p className="md:mb-8 mb-4">
-                                Payment gateways serve as the critical infrastructure that enables businesses to operate across borders, handling currency conversions, compliance, and regulatory requirements seamlessly.
+                                Clinentora provides automated tools to assist your legal practice, but we do not provide legal advice. We are not liable for missed deadlines, malpractice claims, or any indirect, incidental, or consequential damages arising from your use of the platform.
                             </p>
 
-                            <h3 className="mb-2">How payment gateways empower digital commerce</h3>
+                            <h3 className="mb-2">7. Termination</h3>
                             <p className="md:mb-8 mb-4">
-                                By providing secure, fast, and reliable transaction processing, payment gateways remove the technical barriers that once prevented small businesses from competing on a global scale.
+                                We reserve the right to suspend or terminate your access to the platform if you violate these Terms. Upon termination, we will provide you with an opportunity to export your data in a standard format.
                             </p>
 
-                            <h3 className="mb-2">Conclusion: The currency of innovation</h3>
+                            <h3 className="mb-2">8. Contact Information</h3>
                             <p>
-                                As digital commerce continues to evolve, payment gateways will remain at the forefront of innovation, enabling new business models and transforming how we think about money and transactions in the digital age.
+                                If you have any questions about these Terms and Conditions, please contact us at hello@clinentora.com.
                             </p>
                         </article>
                     </Container>

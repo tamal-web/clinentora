@@ -1,62 +1,61 @@
 
-import ticker2 from "@/assets/lottie/512k new.json";
-import ticker4 from "@/assets/lottie/alex manda new.json";
-import heroStat2 from "@/assets/lottie/edward collins new new.json";
-import ticker1 from "@/assets/lottie/progress hours spent.json";
-import ticker3 from "@/assets/lottie/sent and recieve w bg fbk framer.json";
-import heroLottie from "@/assets/lottie/side glow strokes.json";
-import heroStat1 from "@/assets/lottie/your balance 15k.json";
-
 import Container from "@/components/container";
-import FeatureTicker from "@/components/ui/feature-ticker";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
-import Lottie from "lottie-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const FeatureHero = () => {
     return (
-        <section className="relative overflow-hidden hero-padding-top pb-12 md:pb-20 md:space-y-[113px] space-y-8">
+        <section className="relative overflow-hidden hero-padding-top pb-12 md:pb-20 md:space-y-[80px] space-y-8">
             <Container className="relative z-10">
-                <div className="absolute bottom-[-60px] left-5 aspect-[203/188] max-w-[203px] w-full md:block hidden">
-                    <Lottie animationData={heroStat1} className="w-full h-full" />
-                </div>
-                <div className="absolute bottom-[-160px] right-5 aspect-[242/227] max-w-[242px] w-full md:block hidden">
-                    <Lottie animationData={heroStat2} className="w-full h-full" />
-                </div>
-                <StaggerContainer className="flex flex-col items-center text-center max-w-[710px] mx-auto">
+                <StaggerContainer className="flex flex-col items-center text-center max-w-[760px] mx-auto">
                     <AnimateOnView once blur>
+                        <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-4 py-1.5 text-sm text-white/80 mb-6">
+                            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                            Legal Docketing Platform
+                        </div>
                         <h1 className="h1 mb-5">
-                            Explore the reality of finance management
+                            Every Practice Area. One Platform. Zero Missed Deadlines.
                         </h1>
                     </AnimateOnView>
 
                     <AnimateOnView once blur delay={0.1}>
-                        <p className="text-lg text-muted-foreground">
-                            Say goodbye to complexity and hello to simplicity as Wepay transforms the way you manage your finance.
+                        <p className="text-lg text-muted-foreground mb-8">
+                            Clinentora reads every filing the moment it arrives, calculates every deadline automatically, and keeps every attorney informed — across IP, litigation, corporate, immigration, regulatory, and more.
                         </p>
+                    </AnimateOnView>
+
+                    <AnimateOnView once blur delay={0.2}>
+                        <div className="flex flex-wrap gap-4 justify-center">
+                            <Button asChild size="lg">
+                                <Link to="/contact">Request a Demo</Link>
+                            </Button>
+                            <Button asChild size="lg" variant="outline">
+                                <Link to="/pricing">View Pricing</Link>
+                            </Button>
+                        </div>
                     </AnimateOnView>
                 </StaggerContainer>
             </Container>
 
-            <AnimateOnView y={40} delay={0.3} className="relative w-full">
-                <FeatureTicker speed={60} pauseOnHover={true} align="end">
-                    <div className="aspect-[245/159] md:max-w-[245px] max-w-[120px] w-full">
-                        <Lottie animationData={ticker1} className="w-full h-full" />
-                    </div>
-                    <div className="aspect-[477/306] md:max-w-[477px] max-w-[240px] w-full">
-                        <Lottie animationData={ticker2} className="w-full h-full" />
-                    </div>
-                    <div className="aspect-[395/269] md:max-w-[395px] max-w-[190px] w-full">
-                        <Lottie animationData={ticker3} className="w-full h-full" />
-                    </div>
-                    <div className="aspect-[318/164] md:max-w-[318px] max-w-[150px] w-full">
-                        <Lottie animationData={ticker4} className="w-full h-full" />
-                    </div>
-                </FeatureTicker>
+            {/* Practice Area Pills Ticker */}
+            <AnimateOnView y={40} delay={0.3} className="relative w-full overflow-hidden">
+                <div className="flex flex-wrap justify-center gap-3 md:gap-4 px-6 max-w-4xl mx-auto">
+                    {[
+                        "IP Prosecution", "Patent Litigation", "Trademark", "Copyright",
+                        "Corporate M&A", "Commercial Contracts", "Immigration", "Regulatory",
+                        "Real Estate", "Tax Controversy", "Environmental", "Healthcare",
+                    ].map((area) => (
+                        <span
+                            key={area}
+                            className="px-4 py-2 rounded-full bg-card border border-border text-sm text-muted-foreground whitespace-nowrap hover:border-white/20 hover:text-white transition-all duration-300"
+                        >
+                            {area}
+                        </span>
+                    ))}
+                </div>
             </AnimateOnView>
-            <div className="absolute top-[75px] inset-x-0 w-full aspect-[1200/750] md:block hidden">
-                <Lottie animationData={heroLottie} className="w-full h-full" />
-            </div>
         </section>
     )
 }

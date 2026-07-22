@@ -1,23 +1,26 @@
 
 import Container from "@/components/container";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
-import { Calendar, Clock, Users } from "lucide-react";
+import { BarChart3, BookOpen, Clock } from "lucide-react";
 
 const stats = [
     {
-        label: "Annual Turnover",
-        value: "489+",
-        icon: Users,
+        label: "Practice Areas Supported",
+        value: "10+",
+        icon: BookOpen,
+        detail: "IP, litigation, corporate, immigration, regulatory, real estate & more",
     },
     {
-        label: "Profit Margin",
-        value: "12,000+",
-        icon: Calendar,
+        label: "Deadline Compliance Rate",
+        value: "99.9%",
+        icon: BarChart3,
+        detail: "Achieved by docketing teams using Clinentora across all matter types",
     },
     {
-        label: "Expense Ratio",
-        value: "32,00",
+        label: "Documents Processed Daily",
+        value: "24/7",
         icon: Clock,
+        detail: "Continuous processing — no scheduled downtime, no inactivity pauses",
     },
 ];
 
@@ -28,13 +31,13 @@ const WorldwideStats = () => {
                 <div className="text-center md:max-w-[630px] max-w-xs mx-auto">
                     <AnimateOnView blur>
                         <h2 className="h2 mb-5">
-                            Available Worldwide
+                            Built for Scale, Designed for Precision
                         </h2>
                     </AnimateOnView>
 
                     <AnimateOnView blur delay={0.1}>
                         <p className="text-muted-foreground">
-                            Our growth reflects one mission — helping people and companies achieve financial confidence with clarity and ease.
+                            Whether your firm handles one practice area or ten, Clinentora is configured for the specific document types and deadline rules your team works with every day.
                         </p>
                     </AnimateOnView>
                 </div>
@@ -48,40 +51,42 @@ const WorldwideStats = () => {
                     >
                         <div className="relative z-10 pt-[29px] px-6">
                             <h3 className="text-3xl font-semibold text-white leading-tight max-w-[280px]">
-                                Paymark Supports participants and sites
+                                Serving Law Firms Across Jurisdictions
                             </h3>
+                            <p className="text-muted-foreground mt-4 text-sm leading-relaxed max-w-[280px]">
+                                Federal and state courts, international IP offices, regulatory bodies — all covered under one platform with jurisdiction-specific rules maintained continuously.
+                            </p>
                         </div>
 
                         {/* Dot Map Illustration */}
                         <div className="absolute inset-x-0 bottom-0 pointer-events-none p-10 select-none">
 
                             <div className="relative w-full">
-                                {/* SVG Dot Map Placeholder - in a real app this would be a more detailed SVG or Lottie */}
                                 <img src="/images/about/map.webp" alt="map" />
 
-                                {/* Brazil Pin */}
-                                <div className="absolute left-[15%] top-[50%] flex flex-col items-center gap-1">
+                                {/* US Pin */}
+                                <div className="absolute left-[15%] top-[45%] flex flex-col items-center gap-1">
                                     <div className="bg-black border border-white/10 rounded-full px-3 py-1 flex items-center gap-2 shadow-2xl">
-                                        <span className="text-[10px]">🇧🇷</span>
-                                        <span className="text-[10px] text-white/80 font-medium">Brazil</span>
+                                        <span className="text-[10px]">🇺🇸</span>
+                                        <span className="text-[10px] text-white/80 font-medium">Federal Courts</span>
                                     </div>
                                     <div className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
                                 </div>
 
-                                {/* Russia Pin */}
-                                <div className="absolute right-[15%] top-[15%] flex flex-col items-center gap-1">
+                                {/* EU Pin */}
+                                <div className="absolute right-[25%] top-[20%] flex flex-col items-center gap-1">
                                     <div className="bg-black border border-white/10 rounded-full px-3 py-1 flex items-center gap-2 shadow-2xl">
-                                        <span className="text-[10px]">🇷🇺</span>
-                                        <span className="text-[10px] text-white/80 font-medium">Russia</span>
+                                        <span className="text-[10px]">🇪🇺</span>
+                                        <span className="text-[10px] text-white/80 font-medium">EPO / EUIPO</span>
                                     </div>
                                     <div className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
                                 </div>
 
-                                {/* Colombia Pin */}
-                                <div className="absolute left-[45%] top-[35%] flex flex-col items-center gap-1">
+                                {/* WIPO Pin */}
+                                <div className="absolute left-[45%] top-[30%] flex flex-col items-center gap-1">
                                     <div className="bg-black border border-white/10 rounded-full px-3 py-1 flex items-center gap-2 shadow-2xl">
-                                        <span className="text-[10px]">🇨🇴</span>
-                                        <span className="text-[10px] text-white/80 font-medium">Colombia</span>
+                                        <span className="text-[10px]">🌐</span>
+                                        <span className="text-[10px] text-white/80 font-medium">WIPO / PCT</span>
                                     </div>
                                     <div className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
                                 </div>
@@ -107,9 +112,12 @@ const WorldwideStats = () => {
                                     <h3 className="h3">
                                         {stat.value}
                                     </h3>
-                                    <div className="text-muted-foreground text-base">
+                                    <div className="text-muted-foreground text-base font-medium">
                                         {stat.label}
                                     </div>
+                                    <p className="text-sm text-muted-foreground/70 leading-relaxed">
+                                        {stat.detail}
+                                    </p>
                                 </div>
                             </AnimateOnView>
                         ))}

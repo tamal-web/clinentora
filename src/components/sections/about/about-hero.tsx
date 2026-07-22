@@ -2,34 +2,42 @@
 import Container from "@/components/container";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
-import { Newsletter } from "@/components/ui/newsletter";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const AboutHero = () => {
     return (
         <section className="relative md:h-screen flex items-center justify-start overflow-hidden pt-32 pb-20 bg-[url(/images/about/about-hero.png)] bg-cover bg-center">
             {/* Background Placeholder */}
-            <div className="absolute inset-0 bg-black/35">
+            <div className="absolute inset-0 bg-black/55">
             </div>
 
             <Container className="w-full">
-                <StaggerContainer className="max-w-[710px]">
+                <StaggerContainer className="max-w-[760px]">
                     {/* Headline */}
                     <AnimateOnView blur once>
                         <h1 className="h1 mb-4">
-                            Smart Solutions Built for the Future of Finance
+                            Every Practice Area. One Platform. Zero Missed Deadlines.
                         </h1>
                     </AnimateOnView>
 
                     {/* Subheadline */}
                     <AnimateOnView blur once delay={0.1}>
-                        <p className="text-lg mb-[21px]">
-                            Track the growth and engagement of your newsletter detailed analytics your reach.
+                        <p className="text-lg mb-[21px] text-white/80">
+                            Clinentora is a legal docketing platform built for law firms that handle multiple practice areas — handling document intake, deadline calculation, and AI-powered briefings across every matter.
                         </p>
                     </AnimateOnView>
 
-                    {/* Newsletter Form */}
+                    {/* CTA */}
                     <AnimateOnView blur once delay={0.2}>
-                        <Newsletter />
+                        <div className="flex flex-wrap gap-4">
+                            <Button asChild>
+                                <Link to="/contact">Request a Demo</Link>
+                            </Button>
+                            <Button asChild variant="outline">
+                                <Link to="/features">Explore Features</Link>
+                            </Button>
+                        </div>
                     </AnimateOnView>
                 </StaggerContainer>
             </Container>

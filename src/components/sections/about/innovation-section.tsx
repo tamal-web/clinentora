@@ -3,39 +3,39 @@ import Container from "@/components/container";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
 import { cn } from "@/lib/utils";
-import { CreditCard, Gift, LineChart, Send, ShieldCheck, Wallet } from "lucide-react";
+import { Bot, Calendar, FileSearch, Globe, Lock, ScanLine } from "lucide-react";
 
 const features = [
     {
-        title: "Smart Accounts",
-        description: "High-yield accounts that make saving simple and give you more growth opportunities.",
-        icon: Wallet,
+        title: "Automatic Document Processing",
+        description: "Accepts filings via email, agency feed, or upload. Identifies document type, extracts dates, case numbers, and parties automatically — across all practice areas.",
+        icon: ScanLine,
     },
     {
-        title: "Early Access Cards",
-        description: "Unlock credit cards faster with industry-low deposits and tailored card benefits.",
-        icon: CreditCard,
+        title: "AI-Powered Daily Briefings",
+        description: "Each attorney receives a personalised morning digest: deadlines today, this week, and risk flags — in priority order. Plain-English queries return structured results.",
+        icon: Bot,
     },
     {
-        title: "Cashback Rewards",
-        description: "Earn unlimited 2% cashback on purchases, helping you save with every spend.",
-        icon: Gift,
+        title: "Jurisdiction-Specific Rules Engine",
+        description: "Federal and state courts, federal agencies, international IP offices, regulatory bodies. Deadlines falling on non-business days automatically shift per applicable rules.",
+        icon: Globe,
     },
     {
-        title: "Seamless Payments",
-        description: "Easily connect with PayPal, Amazon Pay, Stripe, and others for smooth transfers.",
-        icon: Send,
+        title: "Multi-Practice Area Coverage",
+        description: "IP prosecution, patent litigation, trademark, corporate M&A, immigration, real estate, regulatory — all natively supported without workarounds or gaps.",
+        icon: FileSearch,
     },
     {
-        title: "Business Growth Tools",
-        description: "Access working capital and insights designed to power and grow your business.",
-        icon: LineChart,
+        title: "Complete Audit Trail",
+        description: "Every entry, edit, and deadline change is logged with full history for compliance, supervision, and malpractice defence. Human review before saving is always required.",
+        icon: Calendar,
         highlight: true,
     },
     {
-        title: "Secure & Transparent",
-        description: "Enjoy reliable banking with no hidden fees, built on trust and full clarity.",
-        icon: ShieldCheck,
+        title: "Enterprise-Grade Security",
+        description: "TLS 1.3 in transit, AES-256 at rest, role-based access control, multi-factor authentication. Your matter data is never used to train shared models.",
+        icon: Lock,
     },
 ];
 
@@ -46,13 +46,13 @@ const InnovationSection = () => {
                 <StaggerContainer className="text-center md:max-w-none max-w-sm mx-auto">
                     <AnimateOnView blur once>
                         <h2 className="h2 md:mb-5 mb-3">
-                            Confidence Backed by Innovation
+                            Built for Every Practice Area
                         </h2>
                     </AnimateOnView>
 
                     <AnimateOnView blur once delay={0.1}>
                         <p className="text-muted-foreground max-w-[660px] mx-auto">
-                            Enjoy secure accounts, cashback rewards, and smart financial tools designed to help you grow, save, and invest with confidence.
+                            From automatic document intake to AI-powered daily briefings — Clinentora handles the complete docketing workflow so your legal team can focus on the work that matters.
                         </p>
                     </AnimateOnView>
                 </StaggerContainer>
