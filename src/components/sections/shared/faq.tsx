@@ -10,19 +10,19 @@ import { Link } from "react-router-dom";
 const faqs = [
   {
     question: "What is Clinentora?",
-    answer: "Clinentora is a cloud-based, AI-powered docketing platform built for IP and litigation law firms. It reads incoming filings, extracts every governing date, applies jurisdiction-specific deadline rules, and pre-populates docket entries for your team to review and confirm.",
+    answer: "Clinentora is a cloud-based, AI-powered docketing platform built for law firms handling any practice area. It reads incoming filings, extracts every governing date, applies jurisdiction-specific deadline rules, and pre-populates docket entries for your team to review and confirm.",
   },
   {
     question: "Does Clinentora replace our docketing team?",
-    answer: "No. Clinentora removes the manual data entry step — reading filings, extracting dates, calculating deadlines. Your docketing team reviews and confirms every entry before it is finalised. Full professional control is retained.",
+    answer: "No. Clinentora removes the manual data entry step: reading filings, extracting dates, calculating deadlines. Your docketing team reviews and confirms every entry before it is finalised. Full professional control is retained.",
   },
   {
     question: "Which jurisdictions and filing types are supported?",
-    answer: "Clinentora supports 40+ patent and trademark offices — USPTO, EPO, PCT, JPO, and more — plus 2,500+ federal and state court rule sets for litigation deadlines. Filing types include office actions, notices of allowance, oppositions, PCT national phase entries, renewals, and court orders.",
+    answer: "Clinentora supports 40+ patent and trademark offices including USPTO, EPO, PCT, and JPO, plus 2,500+ federal and state court rule sets for litigation deadlines. Filing types include office actions, notices of allowance, oppositions, PCT national phase entries, renewals, and court orders.",
   },
   {
     question: "Do I need the AI tier to get value from Clinentora?",
-    answer: "No. Tier 1 — Automatic Docketing — delivers filing intake, deadline calculation, and pre-populated entries using OCR, document intelligence, and a jurisdiction rules engine. The AI tier adds natural language search, document summarisation, conflict pre-screening, and portfolio intelligence on top.",
+    answer: "No. Tier 1 (Automatic Docketing) delivers filing intake, deadline calculation, and pre-populated entries using OCR, document intelligence, and a jurisdiction rules engine. The AI tier adds natural language search, document summarisation, conflict pre-screening, and portfolio intelligence on top.",
   }
 ];
 

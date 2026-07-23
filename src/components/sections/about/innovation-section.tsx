@@ -8,12 +8,12 @@ import { Bot, Calendar, FileSearch, Globe, Lock, ScanLine } from "lucide-react";
 const features = [
     {
         title: "Automatic Document Processing",
-        description: "Accepts filings via email, agency feed, or upload. Identifies document type, extracts dates, case numbers, and parties automatically — across all practice areas.",
+        description: "Accepts filings via email, agency feed, or upload. Identifies document type, extracts dates, case numbers, and parties automatically across all practice areas.",
         icon: ScanLine,
     },
     {
         title: "AI-Powered Daily Briefings",
-        description: "Each attorney receives a personalised morning digest: deadlines today, this week, and risk flags — in priority order. Plain-English queries return structured results.",
+        description: "Each attorney receives a personalised morning digest: deadlines today, this week, and risk flags in priority order. Plain-English queries return structured results.",
         icon: Bot,
     },
     {
@@ -23,7 +23,7 @@ const features = [
     },
     {
         title: "Multi-Practice Area Coverage",
-        description: "IP prosecution, patent litigation, trademark, corporate M&A, immigration, real estate, regulatory — all natively supported without workarounds or gaps.",
+        description: "IP prosecution, patent litigation, trademark, corporate M&A, immigration, real estate, regulatory. All natively supported without workarounds or gaps.",
         icon: FileSearch,
     },
     {
@@ -52,7 +52,7 @@ const InnovationSection = () => {
 
                     <AnimateOnView blur once delay={0.1}>
                         <p className="text-muted-foreground max-w-[660px] mx-auto">
-                            From automatic document intake to AI-powered daily briefings — Clinentora handles the complete docketing workflow so your legal team can focus on the work that matters.
+                            From automatic document intake to AI-powered daily briefings, Clinentora handles the complete docketing workflow so your legal team can focus on the work that matters.
                         </p>
                     </AnimateOnView>
                 </StaggerContainer>

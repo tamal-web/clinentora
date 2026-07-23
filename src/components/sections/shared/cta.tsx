@@ -27,12 +27,12 @@ const CTA = () => {
                         delay={0.2}
                     >
                         <p className='text-muted-foreground md:mb-10 mb-5'>
-                            Walk through a live docketing workflow with our team — office actions, EPO notices, court orders, all reviewed and confirmed by your paralegals.
+                            Walk through a live docketing workflow with our team covering office actions, EPO notices, court orders, all reviewed and confirmed by your paralegals.
                         </p>
                     </AnimateOnView>
                     <AnimateOnView>
                         <Button asChild>
-                            <Link to="/contact">
+                            <Link to="/book-a-demo">
                                 Book a Demo
                             </Link>
                         </Button>

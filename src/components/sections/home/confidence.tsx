@@ -34,10 +34,7 @@ const Confidence = () => {
           </AnimateOnView>
           <AnimateOnView blur delay={0.2}>
             <p className="text-muted-foreground md:mb-10 mb-5">
-              IP and litigation attorneys manage hundreds of active matters,
-              each with jurisdiction-specific deadlines. Clinentora eliminates
-              the manual extraction step — your team reviews and confirms, never
-              types dates from a PDF.
+              Attorneys manage hundreds of active matters, each with jurisdiction-specific deadlines. Clinentora eliminates the manual extraction step so your team reviews and confirms, never types dates from a PDF.
             </p>
           </AnimateOnView>
           <AnimateOnView>

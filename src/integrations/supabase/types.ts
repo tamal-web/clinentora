@@ -56,6 +56,79 @@ export type Database = {
         }
         Relationships: []
       }
+      contacts: {
+        Row: {
+          id: string
+          first_name: string
+          last_name: string
+          email: string
+          phone: string | null
+          message: string
+          submitted_at: string
+        }
+        Insert: {
+          id?: string
+          first_name: string
+          last_name: string
+          email: string
+          phone?: string | null
+          message: string
+          submitted_at?: string
+        }
+        Update: {
+          id?: string
+          first_name?: string
+          last_name?: string
+          email?: string
+          phone?: string | null
+          message?: string
+          submitted_at?: string
+        }
+        Relationships: []
+      }
+      demo_bookings: {
+        Row: {
+          id: string
+          first_name: string
+          last_name: string
+          email: string
+          phone: string | null
+          company_name: string
+          firm_size: string
+          ip_area: string
+          preferred_date: string | null
+          message: string | null
+          submitted_at: string
+        }
+        Insert: {
+          id?: string
+          first_name: string
+          last_name: string
+          email: string
+          phone?: string | null
+          company_name: string
+          firm_size: string
+          ip_area: string
+          preferred_date?: string | null
+          message?: string | null
+          submitted_at?: string
+        }
+        Update: {
+          id?: string
+          first_name?: string
+          last_name?: string
+          email?: string
+          phone?: string | null
+          company_name?: string
+          firm_size?: string
+          ip_area?: string
+          preferred_date?: string | null
+          message?: string | null
+          submitted_at?: string
+        }
+        Relationships: []
+      }
+
       profiles: {
         Row: {
           avatar_url: string | null

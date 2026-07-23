@@ -34,7 +34,7 @@ const pages = [
 ];
 
 const innerPages = [
-  { name: "Book a Demo", href: "/contact" },
+  { name: "Book a Demo", href: "/book-a-demo" },
   // { name: "Blog Single", href: "/blog/api-integration-best-practices" },
   // { name: "Early Access", href: "/early-access" },
   { name: "Cookie Policy", href: "/legal/cookie-policy" },
@@ -65,7 +65,7 @@ const Navbar = () => {
               <UserMenu />
             ) : (
               <Button asChild size="sm">
-                <Link to="/contact">Book a Demo</Link>
+                <Link to="/book-a-demo">Book a Demo</Link>
               </Button>
             ))}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -214,7 +214,7 @@ const Navbar = () => {
               <UserMenu />
             ) : (
               <Button asChild>
-                <Link to="/contact">Book a Demo</Link>
+                <Link to="/book-a-demo">Book a Demo</Link>
               </Button>
             ))}
         </div>

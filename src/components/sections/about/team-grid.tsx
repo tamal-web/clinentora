@@ -23,10 +23,10 @@ const teamMembers = [
     },
     {
         name: "Karol Wilder",
-        title: "IP Docketing Advisor",
+        title: "Legal Docketing Advisor",
         avatar: "/images/common/members/karol.webp",
         linkedin: "https://linkedin.com/in/karol-wilder-b521ab103",
-        bio: "35+ years of IP docketing and paralegal experience across major pharmaceutical and life sciences companies, including Eli Lilly, Bayer, MilliporeSigma, and Pfizer.",
+        bio: "35+ years of docketing and paralegal experience across major pharmaceutical and life sciences companies, including Eli Lilly, Bayer, MilliporeSigma, and Pfizer.",
     },
 ];
 

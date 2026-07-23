@@ -11,8 +11,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -38,6 +39,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 const ContactForm = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -50,42 +52,64 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (data: ContactFormValues) => {
+    setError(null);
     try {
-      console.log("Form submitted:", data);
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      // 1. Save to Supabase contacts table
+      const { error: dbError } = await supabase.from("contacts").insert({
+        first_name: data.firstName,
+        last_name: data.lastName,
+        email: data.email,
+        phone: data.phone || null,
+        message: data.message,
+      });
+
+      if (dbError) throw new Error(dbError.message);
+
+      // 2. Send confirmation email via Edge Function (non-blocking)
+      supabase.functions
+        .invoke("send-confirmation-email", {
+          body: {
+            type: "contact",
+            firstName: data.firstName,
+            lastName: data.lastName,
+            email: data.email,
+            phone: data.phone,
+            message: data.message,
+          },
+        })
+        .catch((err) => console.error("Email send error:", err));
+
       toast({
         title: "Message sent successfully!",
-        description: "We'll get back to you as soon as possible.",
+        description: "We'll get back to you within 1–2 business days.",
         variant: "default",
       });
+
       form.reset();
       setIsSuccess(true);
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 3000);
-      setError(null);
-    } catch (error) {
+      setTimeout(() => setIsSuccess(false), 5000);
+    } catch (err) {
+      const msg =
+        err instanceof Error ? err.message : "Failed to send message.";
+      setError(msg);
       toast({
         title: "Failed to send message",
         description: "Please try again later or contact us directly.",
         variant: "destructive",
       });
-      setError("Failed to send message. Please try again later.");
-      setTimeout(() => {
-        setError(null);
-      }, 5000);
+      setTimeout(() => setError(null), 6000);
     }
   };
 
   return (
     <section className="hero-padding-top pb-20">
       <Container className="space-y-12">
-        {/* Header Section */}
+        {/* Header */}
         <div className="text-center max-w-[540px] mx-auto space-y-4">
           <h1 className="h1">Contact Us</h1>
           <p className="text-lg text-muted-foreground">
-            Discover tips, tools, and trends to help you grow and manage your
-            finances more efficiently.
+            Have a question, a partnership idea, or need help with anything?
+            We're here for you.
           </p>
         </div>
 
@@ -110,7 +134,12 @@ const ContactForm = () => {
                   <span className="font-medium">Email</span>
                 </div>
                 <div className="text-sm text-muted-foreground pt-4">
-                  info@clinentora.com
+                  <a
+                    href="mailto:tamal@clinentora.com"
+                    className="hover:text-white transition-colors"
+                  >
+                    tamal@clinentora.com
+                  </a>
                 </div>
               </div>
 
@@ -145,135 +174,143 @@ const ContactForm = () => {
 
           {/* Right Column: Form */}
           <div className="bg-card md:p-[30px] p-6 md:rounded-3xl rounded-lg border border-border h-full">
-            <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-6"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="firstName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-xs uppercase tracking-wider">
-                          First Name
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="First Name"
-                            {...field}
-                            className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-white/20"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="lastName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-xs uppercase tracking-wider">
-                          Last Name
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Last Name"
-                            {...field}
-                            className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-white/20"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+            {isSuccess ? (
+              <div className="flex flex-col items-center justify-center h-full py-16 space-y-4 text-center">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                  <CheckCircle2 className="w-8 h-8 text-primary" />
                 </div>
-
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-xs uppercase tracking-wider">
-                        Email address
-                      </FormLabel>
-                      <FormControl>
-                        <Input
-                          type="email"
-                          placeholder="Email address"
-                          {...field}
-                          className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-white/20"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-xs uppercase tracking-wider">
-                        Phone Number
-                      </FormLabel>
-                      <FormControl>
-                        <Input
-                          type="tel"
-                          placeholder="Phone Number"
-                          {...field}
-                          className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-white/20"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-xs uppercase tracking-wider">
-                        Message
-                      </FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder="Type here..."
-                          className="min-h-[150px] bg-background border-none rounded-[14px] focus-visible:ring-1 focus-visible:ring-white/20 resize-none"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full h-14 rounded-full bg-gradient-to-b from-white to-[#d1d1d1] text-black font-medium hover:opacity-90 transition-opacity mt-4"
-                  disabled={form.formState.isSubmitting}
+                <h3 className="h4">Message received!</h3>
+                <p className="text-muted-foreground max-w-xs">
+                  A confirmation email is on its way to you. We'll be in touch
+                  within 1–2 business days.
+                </p>
+              </div>
+            ) : (
+              <Form {...form}>
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-6"
                 >
-                  Send Message
-                </Button>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <FormField
+                      control={form.control}
+                      name="firstName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-xs uppercase tracking-wider">
+                            First Name
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="First Name"
+                              {...field}
+                              className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-white/20"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="lastName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-xs uppercase tracking-wider">
+                            Last Name
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="Last Name"
+                              {...field}
+                              className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-white/20"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
 
-                {isSuccess && (
-                  <p className="text-center text-sm text-green-500 mt-2">
-                    Message sent successfully!
-                  </p>
-                )}
-                {error && (
-                  <p className="text-center text-sm text-red-500 mt-2">
-                    {error}
-                  </p>
-                )}
-              </form>
-            </Form>
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-xs uppercase tracking-wider">
+                          Email address
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            type="email"
+                            placeholder="Email address"
+                            {...field}
+                            className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-white/20"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-xs uppercase tracking-wider">
+                          Phone Number
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            type="tel"
+                            placeholder="Phone Number"
+                            {...field}
+                            className="bg-background border-none rounded-full h-12 focus-visible:ring-1 focus-visible:ring-white/20"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-xs uppercase tracking-wider">
+                          Message
+                        </FormLabel>
+                        <FormControl>
+                          <Textarea
+                            placeholder="Type here..."
+                            className="min-h-[150px] bg-background border-none rounded-[14px] focus-visible:ring-1 focus-visible:ring-white/20 resize-none"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full h-14 rounded-full bg-gradient-to-b from-white to-[#d1d1d1] text-black font-medium hover:opacity-90 transition-opacity mt-4"
+                    disabled={form.formState.isSubmitting}
+                  >
+                    {form.formState.isSubmitting ? "Sending…" : "Send Message"}
+                  </Button>
+
+                  {error && (
+                    <p className="text-center text-sm text-red-500 mt-2">
+                      {error}
+                    </p>
+                  )}
+                </form>
+              </Form>
+            )}
           </div>
         </div>
       </Container>

@@ -22,7 +22,7 @@ const streamlineFeatures = [
   {
     id: 3,
     title: "Natural language search across your docket",
-    description: "Ask in plain English — \"show all patent matters for Acme Corp due in 30 days\" — and get structured results across the firm.",
+    description: "Ask in plain English: \"show all matters for Acme Corp due in 30 days\" and get structured results across the firm.",
     lottieData: lottie3,
   },
 ];
@@ -39,7 +39,7 @@ const Content = () => {
           </AnimateOnView>
           <AnimateOnView blur delay={0.2}>
             <p className="text-muted-foreground">
-              Every capability, from intake to portfolio intelligence, is built around the docketing team — not around them.
+              Every capability, from intake to portfolio intelligence, is built around the docketing team, not around them.
             </p>
           </AnimateOnView>
         </StaggerContainer>

@@ -18,7 +18,7 @@ const cards = [
     id: 1,
     title: "Filings read and classified on arrival",
     description:
-      "Scanned PDFs, native PDFs, and image-based office actions are parsed automatically — filing type, parties, application numbers, and every governing date extracted before a paralegal opens the document.",
+      "Scanned PDFs, native PDFs, and image-based office actions are parsed automatically: filing type, parties, application numbers, and every governing date extracted before a paralegal opens the document.",
     imageSrc: "images/home/feature-1.png",
     imageAlt: "Document intelligence extracting deadlines from a legal filing",
     overlayData: {
@@ -32,7 +32,7 @@ const cards = [
     id: 2,
     title: "Jurisdiction-specific deadlines, calculated for you",
     description:
-      "USPTO response periods, EPO reply windows, PCT national phase entry, court scheduling orders — 40+ patent and trademark offices and 2,500+ court rule sets, with holiday and weekend adjustment built in.",
+      "USPTO, EPO, PCT, federal and state courts, and regulatory agencies: deadline rules for 40+ patent and trademark offices and 2,500+ court rule sets, with holiday and weekend adjustment built in.",
     imageSrc: "images/home/feature-2.webp",
     imageAlt: "Jurisdiction-specific deadline calculation interface",
     overlayData: {
@@ -46,7 +46,7 @@ const cards = [
     id: 3,
     title: "Human review on every entry",
     description:
-      "Docket entries arrive pre-populated. Your team reviews and confirms every date before it is finalised — full professional control retained, no black-box automation.",
+      "Docket entries arrive pre-populated. Your team reviews and confirms every date before it is finalised. Full professional control retained, no black-box automation.",
     imageSrc: "images/home/feature-3.webp",
     imageAlt: "Paralegal reviewing and confirming a pre-populated docket entry",
     overlayData: {
@@ -70,8 +70,7 @@ const Features = () => {
           </AnimateOnView>
           <AnimateOnView blur delay={0.2}>
             <p className="text-muted-foreground">
-              Built for IP prosecution boutiques, in-house IP departments, and
-              litigation practices that can't afford a missed deadline.
+              Built for law firms and legal departments that cannot afford a missed deadline.
             </p>
           </AnimateOnView>
         </StaggerContainer>

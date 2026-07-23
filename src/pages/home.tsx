@@ -20,12 +20,12 @@ const Home = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Clinentora | Docketing made easy with AI</title>
+        <title>Clinentora | AI-Powered Legal Docketing Platform</title>
 
         {/* The snippet displayed below your title in Google search results */}
         <meta
           name="description"
-          content="Explore my high-quality development work, React projects, and contact details."
+          content="Clinentora is an AI-powered legal docketing platform that reads filings, extracts deadlines, and pre-populates docket entries automatically across all practice areas."
         />
       </Helmet>
       <Hero />

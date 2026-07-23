@@ -20,7 +20,7 @@ const stats = [
         label: "Documents Processed Daily",
         value: "24/7",
         icon: Clock,
-        detail: "Continuous processing — no scheduled downtime, no inactivity pauses",
+        detail: "Continuous processing with no scheduled downtime and no inactivity pauses",
     },
 ];
 
@@ -54,7 +54,7 @@ const WorldwideStats = () => {
                                 Serving Law Firms Across Jurisdictions
                             </h3>
                             <p className="text-muted-foreground mt-4 text-sm leading-relaxed max-w-[280px]">
-                                Federal and state courts, international IP offices, regulatory bodies — all covered under one platform with jurisdiction-specific rules maintained continuously.
+                                Federal and state courts, international IP offices, regulatory bodies. All covered under one platform with jurisdiction-specific rules maintained continuously.
                             </p>
                         </div>
 

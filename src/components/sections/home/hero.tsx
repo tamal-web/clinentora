@@ -11,15 +11,13 @@ const Hero = () => {
           <StaggerContainer>
             <AnimateOnView blur>
               <h1 className="h1 text-foreground mb-4">
-                Intelligent IP Docketing
+                Never Miss a Deadline.<br />Never Type a Date Again.
               </h1>
             </AnimateOnView>
 
             <AnimateOnView blur delay={0.2}>
               <p className="text-body-md max-w-2xl mx-auto mb-8">
-                Clinentora reads incoming filings, extracts every governing date,
-                and populates your docket automatically — every entry reviewed
-                and confirmed by your team.
+                Clinentora reads every filing the moment it arrives, extracts every governing date, and pre-populates your docket automatically. Your team reviews and confirms. No more manual data entry.
               </p>
             </AnimateOnView>
 

@@ -11,13 +11,13 @@ const ConfidenceSection = () => {
         {
             label: "Deadline compliance",
             value: "99.9%",
-            description: "accuracy across all matters and practice areas — consistently maintained",
+            description: "accuracy across all matters and practice areas, consistently maintained",
             icon: "🎯",
         },
         {
             label: "Practice areas covered",
             value: "10+",
-            description: "natively supported — IP, litigation, corporate, regulatory, and more",
+            description: "natively supported: IP, litigation, corporate, regulatory, and more",
             icon: "⚖️",
         },
         {
@@ -40,7 +40,7 @@ const ConfidenceSection = () => {
 
                     <AnimateOnView blur once delay={0.1}>
                         <p className="text-muted-foreground md:mb-8 mb-5">
-                            The docketing platform modern law firms have been waiting for — built to handle every practice area without gaps or workarounds.
+                            The docketing platform modern law firms have been waiting for, built to handle every practice area without gaps or workarounds.
                         </p>
                     </AnimateOnView>
 
@@ -52,7 +52,7 @@ const ConfidenceSection = () => {
                         </Button>
 
                         <div className="mt-4 flex flex-col items-center gap-2">
-                            <span className="text-xs text-muted-foreground">No commitment required — see it working with your documents</span>
+                            <span className="text-xs text-muted-foreground">No commitment required. See it working with your documents.</span>
                             <div className="flex items-center gap-2">
                                 <div className="flex">
                                     {[1, 2, 3, 4, 5].map((star) => (

@@ -19,22 +19,22 @@ const Features = () => {
         {/* Card 1: Automatic Document Processing */}
         <FeatureCard imagePosition="right" className="border-0 bg-[rgba(20,20,20,1)] sticky top-24">
           <FeatureCardContent>
-            <div className="bg-white/10 text-white px-5 py-2 rounded-full mb-5">Core Platform — Automatic Processing</div>
+            <div className="bg-white/10 text-white px-5 py-2 rounded-full mb-5">Core Platform: Automatic Processing</div>
             <FeatureCardTitle className='mb-5'>
-              From Document Received to Docket Entry — Automatically
+              From Document Received to Docket Entry, Automatically
             </FeatureCardTitle>
             <FeatureCardDescription className='mb-5'>
-              Clinentora reads every filing the moment it arrives — via email, direct agency feed, or upload. Native PDFs, scanned documents, and image-based filings are all processed identically, with every governing date, case number, and party name extracted automatically.
+              Clinentora reads every filing the moment it arrives via email, direct agency feed, or upload. Native PDFs, scanned documents, and image-based filings are all processed identically, with every governing date, case number, and party name extracted automatically.
             </FeatureCardDescription>
             <FeatureCardBenefits>
               <FeatureCardBenefitItem>
-                Document intake via email, agency feed, or direct upload — all practice areas
+                Document intake via email, agency feed, or direct upload across all practice areas
               </FeatureCardBenefitItem>
               <FeatureCardBenefitItem>
                 OCR pipeline handles scanned, fax-quality, and handwritten annotations
               </FeatureCardBenefitItem>
               <FeatureCardBenefitItem>
-                Every entry presented for human review before saving — your team retains full control
+                Every entry presented for human review before saving. Your team retains full control.
               </FeatureCardBenefitItem>
             </FeatureCardBenefits>
             <FeatureCardAction>
@@ -68,22 +68,22 @@ const Features = () => {
                 <span className="text-3xl">🤖</span>
               </div>
               <div className="text-left bg-black/30 rounded-xl p-4 border border-white/10 space-y-2">
-                <p className="text-xs text-primary font-medium">Daily Briefing — 7:00 AM</p>
+                <p className="text-xs text-primary font-medium">Daily Briefing at 7:00 AM</p>
                 <p className="text-sm text-white">3 deadlines today · 12 this week</p>
-                <p className="text-xs text-muted-foreground">⚠ 1 matter flagged — response due in 48hrs</p>
+                <p className="text-xs text-muted-foreground">⚠ 1 matter flagged, response due in 48hrs</p>
               </div>
               <div className="text-sm text-muted-foreground">AI-generated, personalised by attorney</div>
             </div>
           </div>
           <FeatureCardContent>
             <div className="bg-white/10 text-white px-5 py-2 rounded-full mb-5">
-              AI Layer — Intelligence Features
+              AI Layer: Intelligence Features
             </div>
             <FeatureCardTitle>
               AI That Works the Way Attorneys Think
             </FeatureCardTitle>
             <FeatureCardDescription className='mb-5'>
-              Natural language search lets you ask "What motion deadlines does the trial team have this month?" and get structured results. Each attorney receives a personalised morning digest with deadlines today, this week, and risk flags — in priority order.
+              Natural language search lets you ask "What motion deadlines does the trial team have this month?" and get structured results. Each attorney receives a personalised morning digest with deadlines today, this week, and risk flags in priority order.
             </FeatureCardDescription>
             <FeatureCardBenefits>
               <FeatureCardBenefitItem>
@@ -123,10 +123,10 @@ const Features = () => {
                 Your data is never used to train shared models or shared with other firms
               </FeatureCardBenefitItem>
               <FeatureCardBenefitItem>
-                Daily automated backups with point-in-time recovery — no data loss risk
+                Daily automated backups with point-in-time recovery. No data loss risk.
               </FeatureCardBenefitItem>
               <FeatureCardBenefitItem>
-                Redundant infrastructure with continuous uptime monitoring — no scheduled downtime
+                Redundant infrastructure with continuous uptime monitoring. No scheduled downtime.
               </FeatureCardBenefitItem>
             </FeatureCardBenefits>
             <FeatureCardAction>

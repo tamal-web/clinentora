@@ -12,7 +12,7 @@ const pageLinks = [
 ];
 
 const innerLinks = [
-  { title: "Book a Demo", href: "/contact" },
+  { title: "Book a Demo", href: "/book-a-demo" },
   { title: "Early Access", href: "/early-access" },
 ];
 
@@ -50,7 +50,7 @@ const Footer = () => {
                 Walk through a live docketing workflow with our team.
               </p>
               <Button asChild>
-                <Link to="/contact">Book a Demo</Link>
+              <Link to="/book-a-demo">Book a Demo</Link>
               </Button>
             </div>
 
@@ -118,7 +118,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-muted-foreground text-sm text-center md:text-left md:max-w-none max-w-xs">
-            © {new Date().getFullYear()} Clinentora · Intelligent IP Docketing
+            © {new Date().getFullYear()} Clinentora · AI-Powered Legal Docketing
             ·{" "}
             <a
               href="mailto:info@clinentora.com"

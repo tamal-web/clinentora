@@ -9,19 +9,19 @@ const features = [
     {
         id: 1,
         title: "Multi-Practice Area Coverage",
-        description: "IP prosecution, patent litigation, trademark, corporate M&A, immigration, regulatory, real estate — all natively supported.",
+        description: "IP prosecution, patent litigation, trademark, corporate M&A, immigration, regulatory, real estate. All natively supported.",
         icon: Scale,
     },
     {
         id: 2,
         title: "Deadline Calculation Engine",
-        description: "Jurisdiction-specific deadline logic across federal and state courts, IP offices, and regulatory bodies — with automatic holiday adjustments.",
+        description: "Jurisdiction-specific deadline logic across federal and state courts, IP offices, and regulatory bodies, with automatic holiday adjustments.",
         icon: Calendar,
     },
     {
         id: 3,
         title: "AI Document Summarisation",
-        description: "Incoming filings are automatically read and summarised: key dates, required actions, parties, and strategic context — across all document types.",
+        description: "Incoming filings are automatically read and summarised: key dates, required actions, parties, and strategic context across all document types.",
         icon: Bot,
     },
     {
@@ -57,7 +57,7 @@ const FeatureGrid = () => {
                     </AnimateOnView>
                     <AnimateOnView blur delay={0.2}>
                         <p className="text-muted-foreground">
-                            Every feature your firm needs to track deadlines across all practice areas — with the automation to remove manual work and the oversight to maintain professional control.
+                            Every feature your firm needs to track deadlines across all practice areas, with the automation to remove manual work and the oversight to maintain professional control.
                         </p>
                     </AnimateOnView>
                 </StaggerContainer>

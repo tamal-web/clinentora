@@ -15,7 +15,10 @@ const About = () => {
       <LogoTicker />
       <ConfidenceSection />
       <InnovationSection />
+      {/*
       <JourneySection />
+
+                */}
       {/*
             <AboutTestimonials />
                 */}

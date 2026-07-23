@@ -24,7 +24,7 @@ const AboutHero = () => {
                     {/* Subheadline */}
                     <AnimateOnView blur once delay={0.1}>
                         <p className="text-lg mb-[21px] text-white/80">
-                            Clinentora is a legal docketing platform built for law firms that handle multiple practice areas — handling document intake, deadline calculation, and AI-powered briefings across every matter.
+                            Clinentora is a legal docketing platform built for law firms that handle multiple practice areas, covering document intake, deadline calculation, and AI-powered briefings across every matter.
                         </p>
                     </AnimateOnView>
 

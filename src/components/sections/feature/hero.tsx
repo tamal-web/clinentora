@@ -22,7 +22,7 @@ const FeatureHero = () => {
 
                     <AnimateOnView once blur delay={0.1}>
                         <p className="text-lg text-muted-foreground mb-8">
-                            Clinentora reads every filing the moment it arrives, calculates every deadline automatically, and keeps every attorney informed — across IP, litigation, corporate, immigration, regulatory, and more.
+                            Clinentora reads every filing the moment it arrives, calculates every deadline automatically, and keeps every attorney informed across IP, litigation, corporate, immigration, regulatory, and more.
                         </p>
                     </AnimateOnView>
 

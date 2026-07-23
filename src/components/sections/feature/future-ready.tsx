@@ -8,7 +8,7 @@ const FutureReadyLegal = () => {
         {
             icon: <Search className="w-5 h-5 text-orange-400" />,
             title: "Natural Language Search",
-            description: "Ask in plain English: 'What motion deadlines does the trial team have this month?' — and get structured results across all matters."
+            description: "Ask in plain English: 'What motion deadlines does the trial team have this month?' and get structured results across all matters."
         },
         {
             icon: <Clock className="w-5 h-5 text-orange-400" />,
@@ -18,7 +18,7 @@ const FutureReadyLegal = () => {
         {
             icon: <CheckSquare className="w-5 h-5 text-orange-400" />,
             title: "Workload Distribution Analysis",
-            description: "Surfaces imbalances across attorneys — flags when one attorney carries a disproportionate deadline load in any given period."
+            description: "Surfaces imbalances across attorneys and flags when one attorney carries a disproportionate deadline load in any given period."
         },
         {
             icon: <BookOpen className="w-5 h-5 text-orange-400" />,
@@ -38,7 +38,7 @@ const FutureReadyLegal = () => {
                     </AnimateOnView>
                     <AnimateOnView blur delay={0.2}>
                         <p className="text-muted-foreground">
-                            Clinentora's AI layer works on top of the core docketing engine — adding intelligence that surfaces risks, answers questions, and keeps every attorney informed without additional effort.
+                            Clinentora's AI layer works on top of the core docketing engine, adding intelligence that surfaces risks, answers questions, and keeps every attorney informed without additional effort.
                         </p>
                     </AnimateOnView>
                 </StaggerContainer>

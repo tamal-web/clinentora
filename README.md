@@ -1,73 +1,48 @@
-# Welcome to your Lovable project
+# Clinentora — Intelligent IP Docketing
 
-## Project info
+Clinentora is a cloud-based, AI-powered docketing platform built for IP and litigation law firms. It automates filing intake, calculates jurisdiction-specific deadlines, and routes entries for human confirmation before they go live.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Tech stack
 
-## How can I edit this code?
+- **Vite** — fast build tooling
+- **TypeScript** — type-safe codebase
+- **React** — component-based UI
+- **shadcn/ui** — accessible UI primitives
+- **Tailwind CSS** — utility-first styling
+- **Supabase** — backend-as-a-service (auth, database, storage)
 
-There are several ways of editing your application.
+## Local development
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+**Requirements**: Node.js ≥ 18 and npm (or pnpm / bun)
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# 1. Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# 2. Navigate into the project
+cd clinentora
 
-# Step 3: Install the necessary dependencies.
-npm i
+# 3. Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Start the dev server (http://localhost:8080)
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Editing the code
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Your IDE** — clone the repo locally, make changes, and push. The dev server supports hot-module replacement.
+- **GitHub** — open any file on GitHub, click the pencil icon, make your changes, and commit.
+- **GitHub Codespaces** — launch a Codespace from the repository's main page for a full in-browser IDE experience.
 
-**Use GitHub Codespaces**
+## Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Build the production bundle and deploy the `dist/` folder to any static host (Vercel, Netlify, Cloudflare Pages, etc.):
 
-## What technologies are used for this project?
+```sh
+npm run build
+```
 
-This project is built with:
+## Custom domain
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Point your DNS records to your chosen hosting provider and configure the domain in that provider's dashboard.

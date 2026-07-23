@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./pages/about";
 import Blog from "./pages/blog";
 import BlogPost from "./pages/blog/[slug]";
+import BookADemo from "./pages/book-a-demo";
 import Contact from "./pages/contact";
 import BlogDashboard from "./pages/dashboard/blog";
 import BlogEditor from "./pages/dashboard/blog/editor";
@@ -42,6 +43,7 @@ const App = () => (
               <Route path="/feature" element={<Feature />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/book-a-demo" element={<BookADemo />} />
               {/*
                   <Route path="/pricing" element={<Pricing />} />
               <Route path="/pricing/starter" element={<StarterPricing />} />

@@ -7,8 +7,8 @@ const advisors = [
   {
     img: "/images/common/members/karol.webp",
     name: "Karol Wilder",
-    title: "IP Docketing Advisor",
-    bio: "35+ years of IP docketing and paralegal experience across Eli Lilly, Bayer Crop Science, MilliporeSigma, and Pfizer. Has managed global portfolios of 1,500+ matters with 99.9–100% deadline compliance and deep hands-on experience with Anaqua and CPI. Brings practitioner knowledge of what docketing software must — and currently fails to — deliver.",
+    title: "Legal Docketing Advisor",
+    bio: "35+ years of docketing and paralegal experience across Eli Lilly, Bayer Crop Science, MilliporeSigma, and Pfizer. Has managed global portfolios of 1,500+ matters with 99.9 to 100% deadline compliance and deep hands-on experience with Anaqua and CPI. Brings practitioner knowledge of what docketing software must deliver and currently fails to.",
     linkedin: "https://linkedin.com/in/karol-wilder-b521ab10",
   },
 ];
@@ -23,7 +23,7 @@ const Advisory = () => {
           </AnimateOnView>
           <AnimateOnView blur delay={0.1}>
             <p className="text-muted-foreground">
-              Senior IP practitioners shaping how Clinentora meets the reality
+              Senior legal practitioners shaping how Clinentora meets the reality
               of a firm's docket.
             </p>
           </AnimateOnView>

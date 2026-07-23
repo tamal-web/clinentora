@@ -9,21 +9,21 @@ import { useEffect, useState } from "react";
 const journeyTabs = [
     {
         title: "The Problem We Saw",
-        description: "Attorneys and docketing specialists across multiple practice areas told us the same thing: existing tools were either too narrow to cover all their work, or still required too much manual data entry. A missed deadline in legal practice is not a minor error — it can be fatal to a case.",
+        description: "Attorneys and docketing specialists across multiple practice areas told us the same thing: existing tools were either too narrow to cover all their work, or still required too much manual data entry. A missed deadline in legal practice is not a minor error. It can be fatal to a case.",
         year: "2023",
         subtitle: "The Insight",
         image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200",
     },
     {
         title: "Building the Foundation",
-        description: "We designed a platform that reads and classifies legal documents across every major practice area — IP prosecution, patent litigation, corporate transactions, immigration, regulatory compliance, and more. The rules engine handles jurisdiction-specific deadline logic automatically.",
+        description: "We designed a platform that reads and classifies legal documents across every major practice area: IP prosecution, patent litigation, corporate transactions, immigration, regulatory compliance, and more. The rules engine handles jurisdiction-specific deadline logic automatically.",
         year: "2024",
         subtitle: "Development",
         image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200",
     },
     {
         title: "Adding the AI Layer",
-        description: "We layered natural language search, document summarisation, and daily intelligent briefings on top of the core docketing engine. Each attorney now gets a personalised morning digest with their deadlines, risk flags, and matters requiring attention — in priority order.",
+        description: "We layered natural language search, document summarisation, and daily intelligent briefings on top of the core docketing engine. Each attorney now gets a personalised morning digest with their deadlines, risk flags, and matters requiring attention, in priority order.",
         year: "2025",
         subtitle: "Intelligence",
         image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
