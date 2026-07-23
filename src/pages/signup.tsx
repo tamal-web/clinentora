@@ -18,7 +18,7 @@ const SignupPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!fullName.trim() || !email.trim() || !password.trim()) {
       toast.error("Please fill in all fields");
       return;
@@ -44,7 +44,7 @@ const SignupPage = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Helmet>
-        <title>Sign Up | Paymark</title>
+        <title>Sign Up | Clinentora</title>
       </Helmet>
       <AuthNavbar />
 
@@ -52,12 +52,16 @@ const SignupPage = () => {
         <Container className="max-w-[480px]">
           <div className="text-center mb-10">
             <h1 className="h2 mb-4">Create Account</h1>
-            <p className="text-muted-foreground">Join Paymark and start managing your payments today.</p>
+            <p className="text-muted-foreground">
+              Join Paymark and start managing your payments today.
+            </p>
           </div>
 
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-2 text-left">
-              <label className="text-white text-sm font-medium ml-1">Full Name</label>
+              <label className="text-white text-sm font-medium ml-1">
+                Full Name
+              </label>
               <Input
                 type="text"
                 placeholder="Your full name"
@@ -69,7 +73,9 @@ const SignupPage = () => {
             </div>
 
             <div className="space-y-2 text-left">
-              <label className="text-white text-sm font-medium ml-1">Work Email</label>
+              <label className="text-white text-sm font-medium ml-1">
+                Work Email
+              </label>
               <Input
                 type="email"
                 placeholder="name@company.com"
@@ -81,7 +87,9 @@ const SignupPage = () => {
             </div>
 
             <div className="space-y-2 text-left">
-              <label className="text-white text-sm font-medium ml-1">Password</label>
+              <label className="text-white text-sm font-medium ml-1">
+                Password
+              </label>
               <Input
                 type="password"
                 placeholder="Create a password"
@@ -92,10 +100,10 @@ const SignupPage = () => {
               />
             </div>
 
-            <Button 
-              type="submit" 
-              variant="primary" 
-              size="lg" 
+            <Button
+              type="submit"
+              variant="primary"
+              size="lg"
               className="w-full rounded-full"
               disabled={loading}
             >
@@ -105,7 +113,10 @@ const SignupPage = () => {
             <div className="text-center pt-4">
               <p className="text-muted-foreground text-sm">
                 Already have an account?{" "}
-                <Link to="/login" className="text-white font-medium hover:underline">
+                <Link
+                  to="/login"
+                  className="text-white font-medium hover:underline"
+                >
                   Log in
                 </Link>
               </p>

@@ -12,7 +12,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
 const ProfilePage = () => {
-  const { user, profile, loading: authLoading, updateProfile, uploadAvatar } = useAuth();
+  const {
+    user,
+    profile,
+    loading: authLoading,
+    updateProfile,
+    uploadAvatar,
+  } = useAuth();
   const navigate = useNavigate();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -93,7 +99,9 @@ const ProfilePage = () => {
 
   const handleRemoveAvatar = async () => {
     setSaving(true);
-    const { error } = await updateProfile({ avatar_url: null as unknown as string });
+    const { error } = await updateProfile({
+      avatar_url: null as unknown as string,
+    });
     setSaving(false);
 
     if (error) {
@@ -115,7 +123,8 @@ const ProfilePage = () => {
     );
   }
 
-  const displayName = profile?.full_name || user?.email?.split("@")[0] || "User";
+  const displayName =
+    profile?.full_name || user?.email?.split("@")[0] || "User";
   const initials = displayName
     .split(" ")
     .map((n) => n[0])
@@ -126,7 +135,7 @@ const ProfilePage = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Helmet>
-        <title>Profile Settings | Paymark</title>
+        <title>Profile Settings | Clinentora</title>
       </Helmet>
 
       <main className="flex-1 relative pt-12 md:pt-20 pb-20 bg-[url(/images/common/banner-gradient.webp)] bg-cover bg-center">
@@ -136,7 +145,9 @@ const ProfilePage = () => {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div className="text-left text-foreground">
                   <h1 className="h1 mb-3">My Profile</h1>
-                  <p className="text-muted-foreground text-lg font-normal">Manage your profile settings and information</p>
+                  <p className="text-muted-foreground text-lg font-normal">
+                    Manage your profile settings and information
+                  </p>
                 </div>
                 <Button variant="outline" asChild>
                   <Link to="/" className="flex items-center gap-2 px-4">
@@ -156,7 +167,10 @@ const ProfilePage = () => {
                     <div className="flex flex-col md:flex-row items-center gap-8">
                       <div className="relative group">
                         <Avatar className="w-32 h-32 border-4 border-white/5 shadow-glow">
-                          <AvatarImage src={profile?.avatar_url || undefined} alt={displayName} />
+                          <AvatarImage
+                            src={profile?.avatar_url || undefined}
+                            alt={displayName}
+                          />
                           <AvatarFallback className="bg-primary/20 text-primary text-4xl font-bold">
                             {initials}
                           </AvatarFallback>
@@ -181,7 +195,11 @@ const ProfilePage = () => {
                         />
                       </div>
                       <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                        <Button variant="primary" onClick={handleAvatarClick} disabled={uploading}>
+                        <Button
+                          variant="primary"
+                          onClick={handleAvatarClick}
+                          disabled={uploading}
+                        >
                           {uploading ? "Uploading..." : "Change Photo"}
                         </Button>
                         {profile?.avatar_url && (
@@ -201,7 +219,9 @@ const ProfilePage = () => {
                   {/* Information Form */}
                   <form className="space-y-8" onSubmit={handleSave}>
                     <div className="space-y-3">
-                      <label className="text-white font-medium ml-1">Full Name</label>
+                      <label className="text-white font-medium ml-1">
+                        Full Name
+                      </label>
                       <Input
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
@@ -211,7 +231,9 @@ const ProfilePage = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <label className="text-white font-medium ml-1">Email</label>
+                      <label className="text-white font-medium ml-1">
+                        Email
+                      </label>
                       <Input
                         readOnly
                         value={user?.email || ""}

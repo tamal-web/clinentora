@@ -29,14 +29,14 @@ const pages = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Features", href: "/feature" },
-  { name: "Blog", href: "/blog" },
+  // { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 
 const innerPages = [
   { name: "Book a Demo", href: "/contact" },
-  { name: "Blog Single", href: "/blog/api-integration-best-practices" },
-  { name: "Early Access", href: "/early-access" },
+  // { name: "Blog Single", href: "/blog/api-integration-best-practices" },
+  // { name: "Early Access", href: "/early-access" },
   { name: "Cookie Policy", href: "/legal/cookie-policy" },
 ];
 
@@ -198,10 +198,10 @@ const Navbar = () => {
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
-                  to="/blog"
+                  to="/contact"
                   className="px-4 py-2 text-white hover:text-primary transition-colors"
                 >
-                  Blog
+                  Contact
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>

@@ -1,6 +1,7 @@
 import Layout from "@/components/layout";
 import Hero from "@/components/sections/home/hero";
 import { lazy, Suspense } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Features = lazy(() => import("@/components/sections/home/features"));
 const Confidence = lazy(() => import("@/components/sections/home/confidence"));
@@ -18,6 +19,15 @@ const LogoTicker = lazy(
 const Home = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Clinentora | Docketing made easy with AI</title>
+
+        {/* The snippet displayed below your title in Google search results */}
+        <meta
+          name="description"
+          content="Explore my high-quality development work, React projects, and contact details."
+        />
+      </Helmet>
       <Hero />
       {/* 
 
@@ -29,9 +39,13 @@ const Home = () => {
       <Suspense fallback={null}>
         <Confidence />
       </Suspense>
+      {/*
+
       <Suspense fallback={null}>
         <Content />
       </Suspense>
+          */}
+
       <Suspense fallback={null}>
         <Team />
       </Suspense>

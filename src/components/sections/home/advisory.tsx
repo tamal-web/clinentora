@@ -38,7 +38,7 @@ const Advisory = () => {
               <div className="flex flex-col gap-1">
                 <img
                   src={member.img}
-                  className="w-full h-[17rem] max-w-[15rem] mb-2 rounded-[13px] overflow-hidden object-cover border-2"
+                  className="w-full h-[17rem] max-w-[15rem] mb-2 rounded-[13px] overflow-hidden object-cover object-top border-2"
                 />
 
                 <span className="text-white font-medium text-lg">

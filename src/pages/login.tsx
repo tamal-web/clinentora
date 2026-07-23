@@ -17,7 +17,7 @@ const LoginPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email.trim() || !password.trim()) {
       toast.error("Please fill in all fields");
       return;
@@ -38,7 +38,7 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Helmet>
-        <title>Login | Paymark</title>
+        <title>Login | Clinentora</title>
       </Helmet>
       <AuthNavbar />
 
@@ -50,7 +50,9 @@ const LoginPage = () => {
 
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-2 text-left">
-              <label className="text-white text-sm font-medium ml-1">Enter your Email</label>
+              <label className="text-white text-sm font-medium ml-1">
+                Enter your Email
+              </label>
               <Input
                 type="email"
                 placeholder="Your email"
@@ -62,7 +64,9 @@ const LoginPage = () => {
             </div>
 
             <div className="space-y-2 text-left">
-              <label className="text-white text-sm font-medium ml-1">Enter your Password</label>
+              <label className="text-white text-sm font-medium ml-1">
+                Enter your Password
+              </label>
               <Input
                 type="password"
                 placeholder="Your password"
@@ -74,15 +78,18 @@ const LoginPage = () => {
             </div>
 
             <div className="flex justify-start">
-              <Link to="#" className="text-muted-foreground text-sm hover:text-white transition-colors">
+              <Link
+                to="#"
+                className="text-muted-foreground text-sm hover:text-white transition-colors"
+              >
                 Forgot password?
               </Link>
             </div>
 
-            <Button 
-              type="submit" 
-              variant="primary" 
-              size="lg" 
+            <Button
+              type="submit"
+              variant="primary"
+              size="lg"
               className="w-full rounded-full"
               disabled={loading}
             >
@@ -92,7 +99,10 @@ const LoginPage = () => {
             <div className="text-center pt-4">
               <p className="text-muted-foreground text-sm">
                 Don't have an account?{" "}
-                <Link to="/signup" className="text-white font-medium hover:underline">
+                <Link
+                  to="/signup"
+                  className="text-white font-medium hover:underline"
+                >
                   Sign up
                 </Link>
               </p>

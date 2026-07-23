@@ -9,18 +9,20 @@ import TeamGrid from "@/components/sections/about/team-grid";
 import WorldwideStats from "@/components/sections/about/worldwide-stats";
 
 const About = () => {
-    return (
-        <Layout>
-            <AboutHero />
-            <LogoTicker />
-            <ConfidenceSection />
-            <InnovationSection />
-            <JourneySection />
+  return (
+    <Layout>
+      <AboutHero />
+      <LogoTicker />
+      <ConfidenceSection />
+      <InnovationSection />
+      <JourneySection />
+      {/*
             <AboutTestimonials />
-            <TeamGrid />
-            <WorldwideStats />
-        </Layout>
-    );
+                */}
+      <TeamGrid />
+      <WorldwideStats />
+    </Layout>
+  );
 };
 
 export default About;
