@@ -34,7 +34,9 @@ const Confidence = () => {
           </AnimateOnView>
           <AnimateOnView blur delay={0.2}>
             <p className="text-muted-foreground md:mb-10 mb-5">
-              Every entry is prepared for your team to review and approve — nothing goes live without human sign-off. Full professional oversight, zero guesswork.
+              Every entry is prepared for your team to review and approve —
+              nothing goes live without human sign-off. Full professional
+              oversight, zero guesswork.
             </p>
           </AnimateOnView>
           <AnimateOnView>

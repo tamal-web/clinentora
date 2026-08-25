@@ -21,10 +21,11 @@ const Hero = () => {
             <AnimateOnView blur delay={0.2}>
               <p className="text-body-md max-w-2xl mx-auto mb-8">
                 {/*
-                Every filing read, every date pulled, every entry filled — your
+                Every filing read, every date pulled, every entry filled — your team just reviews and confirms.
+
                   */}
                 One intelligent platform to manage cases, deadlines, documents,
-                contracts, and more. team just reviews and confirms.
+                contracts, and more.{" "}
               </p>
             </AnimateOnView>
 

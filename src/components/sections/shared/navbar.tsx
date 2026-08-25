@@ -158,11 +158,14 @@ const Navbar = () => {
                         to={product.href}
                         className="flex items-start gap-4 group"
                       >
+                        {/*
+
                         <img
                           src={`/logos/${product.name}.png`}
                           alt={product.name}
                           className="h-8 w-auto mt-0.5 opacity-80 group-hover:opacity-100 transition-opacity"
                         />
+                          */}
                         <div>
                           <p className="text-white font-medium group-hover:text-primary transition-colors">
                             {product.name}

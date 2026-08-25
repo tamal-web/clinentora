@@ -30,7 +30,8 @@ const Team = () => {
           </AnimateOnView>
           <AnimateOnView blur delay={0.1}>
             <p className="text-muted-foreground">
-              Engineers and operators building Clinentora's platforms alongside the firms that rely on them.
+              Engineers and operators building Clinentora's platforms alongside
+              the firms that rely on them.
             </p>
           </AnimateOnView>
         </StaggerContainer>
