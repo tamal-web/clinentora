@@ -8,30 +8,16 @@ const team = [
     img: "/images/common/members/sukhman.webp",
     name: "Sukhmanjeet Singh",
     title: "CEO & Co-Founder",
-    bio: "Leads product vision, firm relationships, and go-to-market. Shapes the platform through direct conversations with IP attorneys and docketing specialists.",
+    bio: "Leads product vision, firm relationships, and go-to-market. Shapes the platform through direct conversations with attorneys and legal teams.",
     linkedin: "https://linkedin.com/in/sukhmanjeet-singh-642a63258",
   },
   {
     img: "/images/common/members/tamal.webp",
     name: "Tamal Krishna Chhabra",
     title: "CTO & Co-Founder",
-    bio: "Leads engineering across document intelligence, jurisdiction rules, and security. Focused on making automation reliable enough for consequential deadlines.",
+    bio: "Leads engineering across document intelligence, AI automation, and security. Focused on making automation reliable enough for high-stakes legal work.",
     linkedin: "https://linkedin.com/in/tamalkrish",
   },
-  // {
-  //   img: "/images/common/members/abhinandan.webp",
-  //   name: "Abhinandan Sambyal",
-  //   title: "CMO & Marketing Director",
-  //   bio: "Leads marketing strategy, brand development, and go-to-market execution.",
-  //   linkedin: "https://linkedin.com/in/abhinandan-sambyal",
-  // },
-  // {
-  //   img: "/images/common/members/rojal.webp",
-  //   name: "Rojal",
-  //   title: "Project Manager",
-  //   bio: "Manages product delivery, cross-team coordination, and operational execution.",
-  //   linkedin: "https://linkedin.com/in/rojal-2006-",
-  // },
 ];
 
 const Team = () => {
@@ -44,8 +30,7 @@ const Team = () => {
           </AnimateOnView>
           <AnimateOnView blur delay={0.1}>
             <p className="text-muted-foreground">
-              Practitioners, engineers, and operators building Clinentora
-              alongside the firms that rely on it.
+              Engineers and operators building Clinentora's platforms alongside the firms that rely on them.
             </p>
           </AnimateOnView>
         </StaggerContainer>

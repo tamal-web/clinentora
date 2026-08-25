@@ -15,6 +15,8 @@ import BlogEditor from "./pages/dashboard/blog/editor";
 import ProfilePage from "./pages/dashboard/profile";
 import EarlyAccess from "./pages/early-access";
 import Feature from "./pages/feature";
+import LexoraPage from "./pages/feature/lexora";
+import QlerklyPage from "./pages/feature/qlerkly";
 import Home from "./pages/home";
 import Integration from "./pages/integration";
 import IntegrationDetailsPage from "./pages/integration/[slug]";
@@ -41,6 +43,8 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/feature" element={<Feature />} />
+              <Route path="/feature/qlerkly" element={<QlerklyPage />} />
+              <Route path="/feature/lexora" element={<LexoraPage />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/book-a-demo" element={<BookADemo />} />

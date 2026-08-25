@@ -11,17 +11,27 @@ const Hero = () => {
           <StaggerContainer>
             <AnimateOnView blur>
               <h1 className="h1 text-foreground mb-4">
-                Never Miss a Deadline.<br />Never Type a Date Again.
+                {/*Legal Management Powered by AI.
+
+                  */}{" "}
+                Smarter Legal Work, <br /> All in One Place
               </h1>
             </AnimateOnView>
 
             <AnimateOnView blur delay={0.2}>
               <p className="text-body-md max-w-2xl mx-auto mb-8">
-                Clinentora reads every filing the moment it arrives, extracts every governing date, and pre-populates your docket automatically. Your team reviews and confirms. No more manual data entry.
+                {/*
+                Every filing read, every date pulled, every entry filled — your
+                  */}
+                One intelligent platform to manage cases, deadlines, documents,
+                contracts, and more. team just reviews and confirms.
               </p>
             </AnimateOnView>
 
-            <AnimateOnView className="flex items-center justify-center" delay={0.3}>
+            <AnimateOnView
+              className="flex items-center justify-center"
+              delay={0.3}
+            >
               <Button asChild size="lg">
                 <Link to="/contact">Book a Demo</Link>
               </Button>

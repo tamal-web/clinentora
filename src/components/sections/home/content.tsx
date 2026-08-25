@@ -9,20 +9,20 @@ import Container from '../../container';
 const streamlineFeatures = [
   {
     id: 1,
-    title: "Document intelligence & intake",
-    description: "OCR, filing type classification, and multi-language parsing across USPTO, EPO, JPO, and PCT correspondence.",
+    title: "Extract dates from documents instantly",
+    description: "Any document — scanned, uploaded, or emailed — is read automatically and every important date is pulled out for you.",
     lottieData: lottie1,
   },
   {
     id: 2,
-    title: "Smart notifications & alerts",
-    description: "Risk-weighted prioritisation, daily attorney briefings, and escalation when a deadline passes without a recorded completion.",
+    title: "Smart alerts before things go wrong",
+    description: "Get notified at the right time, with the right priority. Your team always knows what needs attention today.",
     lottieData: lottie2,
   },
   {
     id: 3,
-    title: "Natural language search across your docket",
-    description: "Ask in plain English: \"show all matters for Acme Corp due in 30 days\" and get structured results across the firm.",
+    title: "Ask anything in plain language",
+    description: "Search across all your matters by typing naturally — no filters, no forms, just answers.",
     lottieData: lottie3,
   },
 ];
@@ -34,12 +34,12 @@ const Content = () => {
         <StaggerContainer className="text-center">
           <AnimateOnView blur>
             <h2 className="h2 md:mb-5 mb-3">
-              Automation, with the practitioner in control
+              Built around how your team actually works
             </h2>
           </AnimateOnView>
           <AnimateOnView blur delay={0.2}>
             <p className="text-muted-foreground">
-              Every capability, from intake to portfolio intelligence, is built around the docketing team, not around them.
+              Every capability is designed to fit into your existing workflow — not replace it.
             </p>
           </AnimateOnView>
         </StaggerContainer>
@@ -96,4 +96,3 @@ const Content = () => {
 }
 
 export default Content
-

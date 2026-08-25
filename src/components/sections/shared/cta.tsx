@@ -9,25 +9,19 @@ import { Link } from "react-router-dom";
 const CTA = () => {
     return (
         <section className="relative overflow-hidden pt-20 md:pt-32">
-            {/* Background Gradient similar to design (dark with subtle glow) */}
             <div className="absolute inset-0 bg-background" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-background to-background pointer-events-none" />
 
             <Container className="relative z-10 space-y-10">
                 <StaggerContainer className="text-center">
-                    <AnimateOnView
-                        blur
-                    >
+                    <AnimateOnView blur>
                         <h2 className="h2 md:mb-5 mb-3">
-                            See Clinentora on your firm's filings.
+                            See it working on your firm's files.
                         </h2>
                     </AnimateOnView>
-                    <AnimateOnView
-                        blur
-                        delay={0.2}
-                    >
+                    <AnimateOnView blur delay={0.2}>
                         <p className='text-muted-foreground md:mb-10 mb-5'>
-                            Walk through a live docketing workflow with our team covering office actions, EPO notices, court orders, all reviewed and confirmed by your paralegals.
+                            Walk through a live session with our team — using your practice areas, your document types, your workflow.
                         </p>
                     </AnimateOnView>
                     <AnimateOnView>

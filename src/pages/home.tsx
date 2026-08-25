@@ -20,17 +20,14 @@ const Home = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Clinentora | AI-Powered Legal Docketing Platform</title>
-
-        {/* The snippet displayed below your title in Google search results */}
+        <title>Clinentora | AI-Powered Legal Management Platform</title>
         <meta
           name="description"
-          content="Clinentora is an AI-powered legal docketing platform that reads filings, extracts deadlines, and pre-populates docket entries automatically across all practice areas."
+          content="Clinentora provides AI-powered legal management platforms — Qlerkly and Legalis — helping law firms manage cases, contracts, documents, and deadlines in one place."
         />
       </Helmet>
       <Hero />
       {/* 
-
       <LogoTicker />
         * */}
       <Suspense fallback={null}>
@@ -40,7 +37,6 @@ const Home = () => {
         <Confidence />
       </Suspense>
       {/*
-
       <Suspense fallback={null}>
         <Content />
       </Suspense>

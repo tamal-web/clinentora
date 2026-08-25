@@ -3,17 +3,16 @@ import { Button } from "@/components/ui/button";
 import { Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const productLinks = [
+  { title: "Qlerkly", href: "/feature/qlerkly" },
+  { title: "Lexora", href: "/feature/lexora" },
+];
+
 const pageLinks = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
-  { title: "Features", href: "/feature" },
-  { title: "Blog", href: "/blog" },
+  { title: "Services", href: "/contact" },
   { title: "Contact", href: "/contact" },
-];
-
-const innerLinks = [
-  { title: "Book a Demo", href: "/book-a-demo" },
-  { title: "Early Access", href: "/early-access" },
 ];
 
 const utilityLinks = [
@@ -44,13 +43,13 @@ const Footer = () => {
           <div className="space-y-16 max-w-[420px]">
             <div className="space-y-6">
               <h3 className="text-[20px] font-medium leading-[140%] tracking-[-0.02em]">
-                See Clinentora on your firm's filings
+                See our platform on your firm's files
               </h3>
               <p className="text-white/70 text-[16px] leading-[150%]">
-                Walk through a live docketing workflow with our team.
+                Walk through a live session with our team.
               </p>
               <Button asChild>
-              <Link to="/book-a-demo">Book a Demo</Link>
+                <Link to="/book-a-demo">Book a Demo</Link>
               </Button>
             </div>
 
@@ -66,7 +65,23 @@ const Footer = () => {
           {/* Right Column: Links */}
           <div className="flex flex-col lg:flex-row gap-8">
             <div>
-              <h4 className="font-semibold text-white mb-6">Pages</h4>
+              <h4 className="font-semibold text-white mb-6">Products</h4>
+              <ul className="space-y-4">
+                {productLinks.map((link) => (
+                  <li key={link.title}>
+                    <Link
+                      to={link.href}
+                      className="text-white/70 hover:text-white transition-colors text-[16px]"
+                    >
+                      {link.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-white mb-6">Company</h4>
               <ul className="space-y-4">
                 {pageLinks.map((link) => (
                   <li key={link.title}>
@@ -82,23 +97,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="font-semibold text-white mb-6">Inner Pages</h4>
-              <ul className="space-y-4">
-                {innerLinks.map((link) => (
-                  <li key={link.title}>
-                    <Link
-                      to={link.href}
-                      className="text-white/70 hover:text-white transition-colors text-[16px]"
-                    >
-                      {link.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-white mb-6">Utility Pages</h4>
+              <h4 className="font-semibold text-white mb-6">Legal</h4>
               <ul className="space-y-4">
                 {utilityLinks.map((link) => (
                   <li key={link.title}>
@@ -118,8 +117,8 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-muted-foreground text-sm text-center md:text-left md:max-w-none max-w-xs">
-            © {new Date().getFullYear()} Clinentora · AI-Powered Legal Docketing
-            ·{" "}
+            © {new Date().getFullYear()} Clinentora · AI-Powered Legal
+            Management ·{" "}
             <a
               href="mailto:info@clinentora.com"
               className="text-white/90 hover:text-white transition-colors"

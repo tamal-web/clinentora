@@ -10,20 +10,20 @@ import { Link } from "react-router-dom";
 const faqs = [
   {
     question: "What is Clinentora?",
-    answer: "Clinentora is a cloud-based, AI-powered docketing platform built for law firms handling any practice area. It reads incoming filings, extracts every governing date, applies jurisdiction-specific deadline rules, and pre-populates docket entries for your team to review and confirm.",
+    answer: "Clinentora is a company that provides AI-powered platforms to help law firms manage cases, documents, contracts, and deadlines in one place. We offer two products: Qlerkly for teams that want straightforward case organisation, and Legalis for teams that want full AI automation.",
   },
   {
-    question: "Does Clinentora replace our docketing team?",
-    answer: "No. Clinentora removes the manual data entry step: reading filings, extracting dates, calculating deadlines. Your docketing team reviews and confirms every entry before it is finalised. Full professional control is retained.",
+    question: "What's the difference between Qlerkly and Legalis?",
+    answer: "Qlerkly is a reliable case management tool — it helps your team stay organised, track important dates, and manage files without complexity. Legalis goes further: it reads incoming documents, extracts dates automatically, runs AI workflows, handles e-discovery, and manages contract lifecycles.",
   },
   {
-    question: "Which jurisdictions and filing types are supported?",
-    answer: "Clinentora supports 40+ patent and trademark offices including USPTO, EPO, PCT, and JPO, plus 2,500+ federal and state court rule sets for litigation deadlines. Filing types include office actions, notices of allowance, oppositions, PCT national phase entries, renewals, and court orders.",
+    question: "Does this replace our existing team?",
+    answer: "No. Our platforms remove manual, repetitive work — reading documents, extracting dates, filling in forms. Your team reviews and approves every entry before it's saved. You stay in full control.",
   },
   {
-    question: "Do I need the AI tier to get value from Clinentora?",
-    answer: "No. Tier 1 (Automatic Docketing) delivers filing intake, deadline calculation, and pre-populated entries using OCR, document intelligence, and a jurisdiction rules engine. The AI tier adds natural language search, document summarisation, conflict pre-screening, and portfolio intelligence on top.",
-  }
+    question: "Which courts and legal bodies are supported?",
+    answer: "We connect directly with federal and state courts, local jurisdictions, and major legal authorities. Rules update automatically, so your deadlines are always accurate without manual maintenance.",
+  },
 ];
 
 const FAQ = () => {
@@ -88,4 +88,3 @@ const FAQ = () => {
 };
 
 export default FAQ;
-

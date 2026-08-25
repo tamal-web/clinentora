@@ -12,12 +12,12 @@ const FeatureGrowth = () => {
                 <StaggerContainer className="text-center md:max-w-none max-w-xs mx-auto">
                     <AnimateOnView blur>
                         <h2 className="h2 md:mb-5 mb-3">
-                            Switching Is Simpler Than You Think
+                            Getting started is easier than you think
                         </h2>
                     </AnimateOnView>
                     <AnimateOnView blur delay={0.2}>
                         <p className="text-muted-foreground max-w-2xl mx-auto">
-                            The biggest barrier to changing docketing systems is the transition. Clinentora is designed to make switching the easy decision, not the hard one.
+                            We handle your data migration, configuration, and onboarding — so your team can hit the ground running without disruption.
                         </p>
                     </AnimateOnView>
                 </StaggerContainer>
@@ -27,23 +27,23 @@ const FeatureGrowth = () => {
                         {[
                             {
                                 emoji: "📂",
-                                title: "Data Import",
-                                description: "Active matters, historical deadlines, and document records are imported from your existing system. Supports common export formats from major docketing platforms.",
+                                title: "Data Migration",
+                                description: "We import your existing cases, files, and records. Your history moves with you — nothing gets left behind.",
                             },
                             {
                                 emoji: "⌨️",
-                                title: "No Re-Keying",
-                                description: "Your team should never have to manually re-enter a deadline that already exists somewhere else. We handle the migration, not you.",
+                                title: "No Re-Entering Data",
+                                description: "Your team never manually re-enters information that already exists. We handle the transfer.",
                             },
                             {
                                 emoji: "🔄",
-                                title: "Parallel Run Period",
-                                description: "Run Clinentora alongside your current system during a transition window, so matters are never tracked in only one place during the changeover.",
+                                title: "Run Both Systems in Parallel",
+                                description: "Keep your current tools running alongside ours during the transition, so nothing falls through the cracks.",
                             },
                             {
                                 emoji: "👥",
                                 title: "Dedicated Onboarding",
-                                description: "A Clinentora specialist works with your docketing staff through setup, data validation, rule configuration for your specific practice areas, and go-live.",
+                                description: "A Clinentora specialist works with your team through setup, configuration, and go-live.",
                             },
                         ].map((item) => (
                             <div key={item.title} className="bg-card border border-border rounded-2xl p-6 flex gap-4">
@@ -60,7 +60,7 @@ const FeatureGrowth = () => {
                 <AnimateOnView blur delay={0.4} className="text-center">
                     <div className="bg-card border border-border rounded-2xl p-8 md:p-12 max-w-2xl mx-auto">
                         <p className="text-lg text-muted-foreground italic leading-relaxed mb-6">
-                            "Every practice area. One platform. Zero missed deadlines. Whether your firm handles one practice area or ten, we'd welcome the chance to show you Clinentora working with the kinds of documents your team receives every day."
+                            "Whether your firm handles one practice area or ten, we'd love to show you how it works on the kinds of documents your team deals with every day."
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <Button asChild>

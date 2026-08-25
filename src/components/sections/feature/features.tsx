@@ -1,157 +1,168 @@
-import { Link } from 'react-router-dom'
-import Container from '../../container'
-import { Button } from '../../ui/button'
-import {
-  FeatureCard,
-  FeatureCardAction,
-  FeatureCardBenefitItem,
-  FeatureCardBenefits,
-  FeatureCardContent,
-  FeatureCardDescription,
-  FeatureCardTitle
-} from '../../ui/feature-card'
+import Container from '@/components/container'
+import { AnimateOnView } from '@/components/ui/motion/animate-on-view'
+import { StaggerContainer } from '@/components/ui/motion/stagger'
 
-const Features = () => {
+interface FeatureSectionProps {
+  badge?: string
+  title: string
+  description: string
+  bullets?: string[]
+  imageSrc?: string
+  imageAlt?: string
+  imagePosition?: 'left' | 'right'
+}
+
+const FeatureSection = ({
+  badge,
+  title,
+  description,
+  bullets,
+  imageSrc,
+  imageAlt,
+  imagePosition = 'right',
+}: FeatureSectionProps) => {
+  const content = (
+    <div className="flex flex-col justify-center gap-4">
+      {badge && (
+        <span className="inline-flex self-start bg-white/10 text-white text-sm px-4 py-1.5 rounded-full">
+          {badge}
+        </span>
+      )}
+      <h2 className="h3 text-white">{title}</h2>
+      <p className="text-muted-foreground leading-relaxed">{description}</p>
+      {bullets && bullets.length > 0 && (
+        <ul className="space-y-2 mt-2">
+          {bullets.map((b, i) => (
+            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+              <span className="text-primary mt-0.5">✓</span>
+              <span>{b}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+
+  const image = (
+    <div className="flex items-center justify-center rounded-2xl overflow-hidden border border-border bg-card/40 min-h-[260px]">
+      {imageSrc ? (
+        <img
+          src={imageSrc}
+          alt={imageAlt || title}
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <p className="text-muted-foreground text-sm p-8 text-center">Image placeholder — drop your screenshot here</p>
+      )}
+    </div>
+  )
 
   return (
+    <div className={`grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center`}>
+      {imagePosition === 'left' ? (
+        <>
+          <AnimateOnView blur delay={0.1}>{image}</AnimateOnView>
+          <AnimateOnView blur delay={0.2}>{content}</AnimateOnView>
+        </>
+      ) : (
+        <>
+          <AnimateOnView blur delay={0.1}>{content}</AnimateOnView>
+          <AnimateOnView blur delay={0.2}>{image}</AnimateOnView>
+        </>
+      )}
+    </div>
+  )
+}
+
+interface FeaturesProps {
+  showAllFeatures?: boolean
+}
+
+const Features = ({ showAllFeatures = true }: FeaturesProps) => {
+  return (
     <section className="md:py-[60px] py-12 bg-background">
-      <Container className="md:space-y-16 space-y-8">
-        {/* Card 1: Automatic Document Processing */}
-        <FeatureCard imagePosition="right" className="border-0 bg-[rgba(20,20,20,1)] sticky top-24">
-          <FeatureCardContent>
-            <div className="bg-white/10 text-white px-5 py-2 rounded-full mb-5">Core Platform: Automatic Processing</div>
-            <FeatureCardTitle className='mb-5'>
-              From Document Received to Docket Entry, Automatically
-            </FeatureCardTitle>
-            <FeatureCardDescription className='mb-5'>
-              Clinentora reads every filing the moment it arrives via email, direct agency feed, or upload. Native PDFs, scanned documents, and image-based filings are all processed identically, with every governing date, case number, and party name extracted automatically.
-            </FeatureCardDescription>
-            <FeatureCardBenefits>
-              <FeatureCardBenefitItem>
-                Document intake via email, agency feed, or direct upload across all practice areas
-              </FeatureCardBenefitItem>
-              <FeatureCardBenefitItem>
-                OCR pipeline handles scanned, fax-quality, and handwritten annotations
-              </FeatureCardBenefitItem>
-              <FeatureCardBenefitItem>
-                Every entry presented for human review before saving. Your team retains full control.
-              </FeatureCardBenefitItem>
-            </FeatureCardBenefits>
-            <FeatureCardAction>
-              <Button asChild>
-                <Link to="/contact">
-                  Request a Demo
-                </Link>
-              </Button>
-            </FeatureCardAction>
-          </FeatureCardContent>
-          <div className="flex items-center justify-center bg-card rounded-2xl p-8 min-h-[320px]">
-            <div className="text-center space-y-6 max-w-xs">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mx-auto">
-                <span className="text-3xl">📄</span>
-              </div>
-              <div className="space-y-3">
-                <div className="h-2 bg-white/10 rounded-full w-full" />
-                <div className="h-2 bg-white/10 rounded-full w-4/5 mx-auto" />
-                <div className="h-2 bg-primary/30 rounded-full w-3/5 mx-auto" />
-              </div>
-              <div className="text-sm text-muted-foreground">Filing classified · Dates extracted · Entry pre-populated</div>
-            </div>
-          </div>
-        </FeatureCard>
+      <Container className="space-y-20 md:space-y-32">
 
-        {/* Card 2: AI-Powered Features */}
-        <FeatureCard imagePosition="left" className="border-0 bg-[rgba(20,20,20,1)] sticky top-24">
-          <div className="flex items-center justify-center bg-card rounded-2xl p-8 min-h-[320px]">
-            <div className="text-center space-y-5 max-w-sm w-full">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mx-auto">
-                <span className="text-3xl">🤖</span>
-              </div>
-              <div className="text-left bg-black/30 rounded-xl p-4 border border-white/10 space-y-2">
-                <p className="text-xs text-primary font-medium">Daily Briefing at 7:00 AM</p>
-                <p className="text-sm text-white">3 deadlines today · 12 this week</p>
-                <p className="text-xs text-muted-foreground">⚠ 1 matter flagged, response due in 48hrs</p>
-              </div>
-              <div className="text-sm text-muted-foreground">AI-generated, personalised by attorney</div>
-            </div>
-          </div>
-          <FeatureCardContent>
-            <div className="bg-white/10 text-white px-5 py-2 rounded-full mb-5">
-              AI Layer: Intelligence Features
-            </div>
-            <FeatureCardTitle>
-              AI That Works the Way Attorneys Think
-            </FeatureCardTitle>
-            <FeatureCardDescription className='mb-5'>
-              Natural language search lets you ask "What motion deadlines does the trial team have this month?" and get structured results. Each attorney receives a personalised morning digest with deadlines today, this week, and risk flags in priority order.
-            </FeatureCardDescription>
-            <FeatureCardBenefits>
-              <FeatureCardBenefitItem>
-                Natural language search across all matters and practice areas
-              </FeatureCardBenefitItem>
-              <FeatureCardBenefitItem>
-                AI document summarisation: key dates, required actions, strategic context
-              </FeatureCardBenefitItem>
-              <FeatureCardBenefitItem>
-                Conflict of interest screening on every new matter intake
-              </FeatureCardBenefitItem>
-            </FeatureCardBenefits>
-            <FeatureCardAction>
-              <Button asChild>
-                <Link to="/contact">
-                  Request a Demo
-                </Link>
-              </Button>
-            </FeatureCardAction>
-          </FeatureCardContent>
-        </FeatureCard>
+        {/* Matter & Case Management */}
+        <FeatureSection
+          badge="Case Management"
+          title="All your cases, organised in one place"
+          description="Create matters, assign teams, upload documents, and track every case from intake to close — without switching between tools."
+          bullets={[
+            "Full matter history, notes, and documents in one view",
+            "Assign tasks and track who's responsible for what",
+            "Status updates visible to the whole team instantly",
+          ]}
+          imagePosition="right"
+        />
 
-        {/* Card 3: Security & Reliability */}
-        <FeatureCard imagePosition="right" className="border-0 bg-[rgba(20,20,20,1)] sticky top-24">
-          <FeatureCardContent>
-            <div className="bg-white/10 text-white px-5 py-2 rounded-full mb-5">
-              Security & Reliability
-            </div>
-            <FeatureCardTitle>
-              Client Matter Data Protected at Every Level
-            </FeatureCardTitle>
-            <FeatureCardDescription className='mb-5'>
-              Legal matter data is among the most sensitive information any firm handles. Clinentora encrypts all data in transit (TLS 1.3) and at rest (AES-256), with role-based access control, multi-factor authentication, and a complete audit trail of every access and change.
-            </FeatureCardDescription>
-            <FeatureCardBenefits>
-              <FeatureCardBenefitItem>
-                Your data is never used to train shared models or shared with other firms
-              </FeatureCardBenefitItem>
-              <FeatureCardBenefitItem>
-                Daily automated backups with point-in-time recovery. No data loss risk.
-              </FeatureCardBenefitItem>
-              <FeatureCardBenefitItem>
-                Redundant infrastructure with continuous uptime monitoring. No scheduled downtime.
-              </FeatureCardBenefitItem>
-            </FeatureCardBenefits>
-            <FeatureCardAction>
-              <Button asChild>
-                <Link to="/contact">
-                  Request a Demo
-                </Link>
-              </Button>
-            </FeatureCardAction>
-          </FeatureCardContent>
-          <div className="flex items-center justify-center bg-card rounded-2xl p-8 min-h-[320px]">
-            <div className="text-center space-y-5 max-w-xs">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mx-auto">
-                <span className="text-3xl">🔒</span>
-              </div>
-              <div className="grid grid-cols-2 gap-2 text-left">
-                {["TLS 1.3", "AES-256", "MFA", "RBAC", "Audit Log", "Zero Downtime"].map((item) => (
-                  <div key={item} className="bg-white/5 rounded-lg px-3 py-2 text-xs text-white/70 border border-white/10">
-                    ✓ {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </FeatureCard>
+        {/* Agentic AI */}
+        <FeatureSection
+          badge="Agentic AI"
+          title="Tell it what to do. It handles the rest."
+          description="Type a request in plain language — the AI reads emails, extracts dates, assigns tasks, triggers workflows, and summarises documents automatically."
+          bullets={[
+            "Natural language commands to automate any task",
+            "Reads incoming emails and pulls out key information",
+            "Runs multi-step workflows without manual triggers",
+          ]}
+          imagePosition="left"
+        />
+
+        {/* E-Discovery */}
+        <FeatureSection
+          badge="E-Discovery"
+          title="Find anything across all your matters"
+          description="Search every document, email, and case file instantly. Surface the right evidence without hours of manual review."
+          bullets={[
+            "Full-text search across all uploaded documents",
+            "Filter by matter, date range, document type, or keyword",
+            "Instant results — no waiting, no manual indexing",
+          ]}
+          imagePosition="right"
+        />
+
+        {/* Contract Lifecycle */}
+        <FeatureSection
+          badge="Contract Lifecycle Management"
+          title="Contracts from draft to renewal"
+          description="Track every contract in your firm — drafting, review, signing, and expiry. Get alerts before renewals so nothing lapses quietly."
+          bullets={[
+            "Contract status visible at every stage",
+            "Automatic alerts before expiry and renewal dates",
+            "All versions and approvals stored in one place",
+          ]}
+          imagePosition="left"
+        />
+
+        {/* Jurisdiction Integration */}
+        <FeatureSection
+          badge="Jurisdiction Integration"
+          title="Connected to courts and legal authorities"
+          description="Directly integrated with federal courts, state courts, and major legal bodies. Deadline rules update automatically — no manual maintenance needed."
+          bullets={[
+            "Synced with local and international legal authorities",
+            "Rules update automatically when they change",
+            "Holiday and weekend adjustments handled for you",
+          ]}
+          imagePosition="right"
+        />
+
+        {/* Security */}
+        {showAllFeatures && (
+          <FeatureSection
+            badge="Security & Privacy"
+            title="Your client data stays private"
+            description="All data is encrypted in transit and at rest. Role-based access, full audit logs, and daily backups ensure your firm's information is always protected."
+            bullets={[
+              "Your data is never used to train shared AI models",
+              "Role-based access — every team member sees only what they need",
+              "Complete audit trail of every change and access",
+            ]}
+            imagePosition="left"
+          />
+        )}
+
       </Container>
     </section>
   )

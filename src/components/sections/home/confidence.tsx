@@ -29,12 +29,12 @@ const Confidence = () => {
         <StaggerContainer className="text-center max-w-[600px] mx-auto">
           <AnimateOnView blur>
             <h2 className="h2 md:mb-5 mb-3">
-              A missed deadline shouldn't come down to data entry
+              Your team stays in control. Always.
             </h2>
           </AnimateOnView>
           <AnimateOnView blur delay={0.2}>
             <p className="text-muted-foreground md:mb-10 mb-5">
-              Attorneys manage hundreds of active matters, each with jurisdiction-specific deadlines. Clinentora eliminates the manual extraction step so your team reviews and confirms, never types dates from a PDF.
+              Every entry is prepared for your team to review and approve — nothing goes live without human sign-off. Full professional oversight, zero guesswork.
             </p>
           </AnimateOnView>
           <AnimateOnView>

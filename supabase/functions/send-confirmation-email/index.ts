@@ -117,11 +117,14 @@ function buildDemoEmailHtml(p: EmailPayload): string {
                 Your demo request is in, ${p.firstName}.
               </h1>
               <p style="margin:0 0 24px;font-size:16px;color:#ACAFB9;line-height:1.6;">
-                Thank you for your interest in Clinentora. We'll review your request and reach out within <strong style="color:#FFFFFF;">1 business day</strong> to confirm a time that works for you.
+                Thank you for your interest in Clinentora. We'll review your request and reach out within <strong style="color:#FFFFFF;">2 business day</strong> to confirm a time that works for you.
               </p>
+                  <!-- 
               <p style="margin:0 0 32px;font-size:16px;color:#ACAFB9;line-height:1.6;">
                 During the demo, we'll walk through a live docketing workflow on your firm's filings — office actions, EPO notices, court orders — all reviewed and confirmed by your paralegals.
               </p>
+
+-->
               <table width="100%" cellpadding="0" cellspacing="0" style="background:#0E0E0E;border-radius:12px;border:1px solid #2C2C2C;margin-bottom:32px;">
                 <tr>
                   <td style="padding:24px 28px;">

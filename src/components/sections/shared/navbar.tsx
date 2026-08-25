@@ -25,19 +25,23 @@ import {
 import { useAuth } from "@/hooks/use-auth";
 import { Link } from "react-router-dom";
 
-const pages = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Features", href: "/feature" },
-  // { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
+const products = [
+  {
+    name: "Qlerkly",
+    href: "/feature/qlerkly",
+    description: "Reliable case management for legal teams",
+  },
+  {
+    name: "Lexora",
+    href: "/feature/lexora",
+    description: "AI-powered platform with full automation",
+  },
 ];
 
-const innerPages = [
-  { name: "Book a Demo", href: "/book-a-demo" },
-  // { name: "Blog Single", href: "/blog/api-integration-best-practices" },
-  // { name: "Early Access", href: "/early-access" },
-  { name: "Cookie Policy", href: "/legal/cookie-policy" },
+const navLinks = [
+  { name: "Services", href: "/contact" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
@@ -103,28 +107,31 @@ const Navbar = () => {
                 </SheetHeader>
                 <div className="px-2 py-6 flex flex-col h-full justify-between flex-1 overflow-y-auto">
                   <div className="flex flex-col gap-4">
-                    <div className="space-y-2">
-                      <p className="text-white uppercase mb-3">Pages</p>
-                      {pages.map((page) => (
+                    <div className="space-y-3">
+                      <p className="text-white uppercase mb-3">Products</p>
+                      {products.map((product) => (
                         <Link
-                          to={page.href}
+                          key={product.name}
+                          to={product.href}
                           onClick={() => setIsOpen(false)}
                           className="block py-1 text-muted-foreground hover:text-primary transition-colors"
                         >
-                          {page.name}
+                          {product.name}
+                          <span className="block text-xs text-muted-foreground/60 mt-0.5">
+                            {product.description}
+                          </span>
                         </Link>
                       ))}
                     </div>
-
                     <div className="space-y-2 pt-4">
-                      <p className="text-white uppercase mb-3">Inner Pages</p>
-                      {innerPages.map((page) => (
+                      {navLinks.map((link) => (
                         <Link
-                          to={page.href}
+                          key={link.name}
+                          to={link.href}
                           onClick={() => setIsOpen(false)}
                           className="block py-1 text-muted-foreground hover:text-primary transition-colors"
                         >
-                          {page.name}
+                          {link.name}
                         </Link>
                       ))}
                     </div>
@@ -140,71 +147,49 @@ const Navbar = () => {
           <NavigationMenuList className="gap-1">
             <NavigationMenuItem>
               <NavigationMenuTrigger className="text-white bg-transparent hover:bg-transparent data-[state=open]:bg-transparent hover:text-primary">
-                Pages
+                Products
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="w-[380px] p-6 bg-background">
-                  <div className="grid grid-cols-2 gap-8">
-                    {/* Column 1 - Pages */}
-                    <div className="space-y-3">
-                      {pages.map((page) => (
-                        <Link
-                          to={page.href}
-                          className="block text-muted-foreground hover:text-white transition-colors"
-                        >
-                          {page.name}
-                        </Link>
-                      ))}
-                    </div>
-
-                    {/* Column 2 - Inner Pages */}
-                    <div className="space-y-3">
-                      {innerPages.map((page) => (
-                        <Link
-                          to={page.href}
-                          className="block text-muted-foreground hover:text-white transition-colors"
-                        >
-                          {page.name}
-                        </Link>
-                      ))}
-                    </div>
+                <div className="w-[360px] p-6 bg-background">
+                  <div className="space-y-5">
+                    {products.map((product) => (
+                      <Link
+                        key={product.name}
+                        to={product.href}
+                        className="flex items-start gap-4 group"
+                      >
+                        <img
+                          src={`/logos/${product.name}.png`}
+                          alt={product.name}
+                          className="h-8 w-auto mt-0.5 opacity-80 group-hover:opacity-100 transition-opacity"
+                        />
+                        <div>
+                          <p className="text-white font-medium group-hover:text-primary transition-colors">
+                            {product.name}
+                          </p>
+                          <p className="text-xs text-muted-foreground mt-0.5">
+                            {product.description}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
                   </div>
                 </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link
-                  to="/feature"
-                  className="px-4 py-2 text-white hover:text-primary transition-colors"
-                >
-                  Features
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link
-                  to="/about"
-                  className="px-4 py-2 text-white hover:text-primary transition-colors"
-                >
-                  About
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link
-                  to="/contact"
-                  className="px-4 py-2 text-white hover:text-primary transition-colors"
-                >
-                  Contact
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+            {navLinks.map((link) => (
+              <NavigationMenuItem key={link.name}>
+                <NavigationMenuLink asChild>
+                  <Link
+                    to={link.href}
+                    className="px-4 py-2 text-white hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            ))}
           </NavigationMenuList>
         </NavigationMenu>
 

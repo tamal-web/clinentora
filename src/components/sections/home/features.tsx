@@ -1,11 +1,8 @@
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
-import { Link } from "react-router-dom";
 import Container from "../../container";
-import { Button } from "../../ui/button";
 import {
   FeatureCard,
-  FeatureCardAction,
   FeatureCardContent,
   FeatureCardDescription,
   FeatureCardImage,
@@ -16,43 +13,57 @@ import {
 const cards = [
   {
     id: 1,
-    title: "Filings read and classified on arrival",
+    title: "Agentic AI that works for you",
     description:
-      "Scanned PDFs, native PDFs, and image-based office actions are parsed automatically: filing type, parties, application numbers, and every governing date extracted before a paralegal opens the document.",
+      "Tell it what to do in plain language. The AI handles workflows, reads your emails, assigns tasks, and automates repetitive work — so your team focuses on clients.",
     imageSrc: "images/home/feature-1.png",
-    imageAlt: "Document intelligence extracting deadlines from a legal filing",
+    imageAlt: "Agentic AI automating legal workflows",
     overlayData: {
       src: "images/home/feature-stat-1.webp",
-      alt: "Extracted deadline summary",
+      alt: "AI workflow summary",
       className: "aspect-[203/188] w-full max-w-[203px] hidden",
     },
     overlayPosition: "bottom-left" as const,
   },
   {
     id: 2,
-    title: "Jurisdiction-specific deadlines, calculated for you",
+    title: "E-Discovery across all matters",
     description:
-      "USPTO, EPO, PCT, federal and state courts, and regulatory agencies: deadline rules for 40+ patent and trademark offices and 2,500+ court rule sets, with holiday and weekend adjustment built in.",
+      "Find any document, communication, or case file in seconds. Search across your entire matter history without digging through folders or emailing colleagues.",
     imageSrc: "images/home/feature-2.webp",
-    imageAlt: "Jurisdiction-specific deadline calculation interface",
+    imageAlt: "E-Discovery search interface",
     overlayData: {
       src: "images/home/feature-stat-2.png",
-      alt: "Deadline projection panel",
+      alt: "Search results panel",
       className: "aspect-[244/130] w-full max-w-[244px] hidden",
     },
     overlayPosition: "bottom-left" as const,
   },
   {
     id: 3,
-    title: "Human review on every entry",
+    title: "Contract lifecycle, start to finish",
     description:
-      "Docket entries arrive pre-populated. Your team reviews and confirms every date before it is finalised. Full professional control retained, no black-box automation.",
+      "Draft, review, approve, and track every contract in one place. Get alerts before renewals and expirations — never let a contract lapse unnoticed.",
     imageSrc: "images/home/feature-3.webp",
-    imageAlt: "Paralegal reviewing and confirming a pre-populated docket entry",
+    imageAlt: "Contract lifecycle management dashboard",
     overlayData: {
       src: "images/home/feature-stat-3.png",
-      alt: "Review and confirm panel",
+      alt: "Contract status panel",
       className: "aspect-[173/180] w-full max-w-[173px]",
+    },
+    overlayPosition: "bottom-left" as const,
+  },
+  {
+    id: 4,
+    title: "Connected to courts and authorities",
+    description:
+      "Directly integrated with local and international legal authorities. Rules update automatically so your deadlines are always accurate.",
+    imageSrc: "images/home/feature-1.png",
+    imageAlt: "Jurisdiction integration with courts",
+    overlayData: {
+      src: "images/home/feature-stat-1.webp",
+      alt: "Jurisdiction sync panel",
+      className: "aspect-[203/188] w-full max-w-[203px] hidden",
     },
     overlayPosition: "bottom-left" as const,
   },
@@ -65,12 +76,12 @@ const Features = () => {
         <StaggerContainer className="text-center max-w-xl mx-auto">
           <AnimateOnView blur>
             <h2 className="h2 mb-6">
-              Docketing that removes the data entry step
+              Everything your firm needs in one place
             </h2>
           </AnimateOnView>
           <AnimateOnView blur delay={0.2}>
             <p className="text-muted-foreground">
-              Built for law firms and legal departments that cannot afford a missed deadline.
+              Built for law firms and legal teams that want to work smarter, not harder.
             </p>
           </AnimateOnView>
         </StaggerContainer>
@@ -87,11 +98,6 @@ const Features = () => {
                   <FeatureCardDescription>
                     {card.description}
                   </FeatureCardDescription>
-                  <FeatureCardAction>
-                    <Button asChild>
-                      <Link to="/contact">Book a Demo</Link>
-                    </Button>
-                  </FeatureCardAction>
                 </FeatureCardContent>
                 <FeatureCardImage src={card.imageSrc} alt={card.imageAlt}>
                   <FeatureCardOverlay

@@ -2,44 +2,43 @@
 import Container from "@/components/container";
 import { AnimateOnView } from "@/components/ui/motion/animate-on-view";
 import { StaggerContainer } from "@/components/ui/motion/stagger";
-import { AnimatePresence, motion } from "framer-motion";
 import { Bot, BookText, Calendar, FileCheck, Scale, Shield } from "lucide-react";
 
 const features = [
     {
         id: 1,
-        title: "Multi-Practice Area Coverage",
-        description: "IP prosecution, patent litigation, trademark, corporate M&A, immigration, regulatory, real estate. All natively supported.",
+        title: "Multi-Practice Coverage",
+        description: "Litigation, corporate, immigration, regulatory, real estate, tax, and more — all natively supported in one platform.",
         icon: Scale,
     },
     {
         id: 2,
-        title: "Deadline Calculation Engine",
-        description: "Jurisdiction-specific deadline logic across federal and state courts, IP offices, and regulatory bodies, with automatic holiday adjustments.",
+        title: "Automatic Date Extraction",
+        description: "Every incoming document is read and every important date is pulled out automatically — no typing required.",
         icon: Calendar,
     },
     {
         id: 3,
-        title: "AI Document Summarisation",
-        description: "Incoming filings are automatically read and summarised: key dates, required actions, parties, and strategic context across all document types.",
+        title: "AI Document Summaries",
+        description: "Incoming files are summarised instantly: key dates, required actions, and who needs to respond.",
         icon: Bot,
     },
     {
         id: 4,
-        title: "Complete Audit Trail",
-        description: "Every entry, edit, and deadline change logged permanently for compliance, supervision, and malpractice defence.",
+        title: "Full Audit Trail",
+        description: "Every entry, edit, and change is logged permanently for compliance and supervision.",
         icon: Shield,
     },
     {
         id: 5,
-        title: "Client Report Generation",
-        description: "Generate professional status updates summarising matter history, recent activity, and upcoming deadlines in plain language.",
+        title: "Client Status Reports",
+        description: "Generate professional updates on any matter — recent activity, upcoming dates, and next steps in plain language.",
         icon: BookText,
     },
     {
         id: 6,
-        title: "Docket Entry Pre-Population",
-        description: "Every entry is presented for human review and confirmation before saving. Full professional control remains with your docketing team.",
+        title: "Human Review on Every Entry",
+        description: "Everything is prepared for your team to approve before it's saved. Full control stays with your people.",
         icon: FileCheck,
     },
 ]
@@ -52,12 +51,12 @@ const FeatureGrid = () => {
                 <StaggerContainer className="text-center md:max-w-xl max-w-sm mx-auto">
                     <AnimateOnView blur>
                         <h2 className="h2 md:mb-5 mb-3">
-                            The Complete Docketing Platform
+                            Everything your firm needs
                         </h2>
                     </AnimateOnView>
                     <AnimateOnView blur delay={0.2}>
                         <p className="text-muted-foreground">
-                            Every feature your firm needs to track deadlines across all practice areas, with the automation to remove manual work and the oversight to maintain professional control.
+                            Every tool your legal team needs to stay organised, move faster, and never miss what matters.
                         </p>
                     </AnimateOnView>
                 </StaggerContainer>
