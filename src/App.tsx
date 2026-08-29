@@ -28,6 +28,7 @@ import NotFound from "./pages/not-found";
 import Pricing from "./pages/pricing";
 import ProfessionalPricing from "./pages/pricing/professional";
 import StarterPricing from "./pages/pricing/starter";
+import Services from "./pages/services";
 import SignupPage from "./pages/signup";
 
 const queryClient = new QueryClient();
@@ -47,6 +48,7 @@ const App = () => (
               <Route path="/feature/lexora" element={<LexoraPage />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
               <Route path="/book-a-demo" element={<BookADemo />} />
               {/*
                   <Route path="/pricing" element={<Pricing />} />

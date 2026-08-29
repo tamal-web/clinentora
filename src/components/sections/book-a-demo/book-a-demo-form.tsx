@@ -200,10 +200,10 @@ const BookADemoForm = () => {
               <div className="bg-background p-4 rounded-2xl border border-white/5 flex items-center gap-3">
                 <Mail className="w-4 h-4 text-muted-foreground shrink-0" />
                 <a
-                  href="mailto:tamal@clinentora.com"
+                  href="mailto:info@clinentora.com"
                   className="text-xs text-muted-foreground hover:text-white transition-colors truncate"
                 >
-                  tamal@clinentora.com
+                  info@clinentora.com
                 </a>
               </div>
               <div className="bg-background p-4 rounded-2xl border border-white/5 flex items-center gap-3">

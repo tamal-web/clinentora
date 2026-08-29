@@ -80,7 +80,7 @@ function buildContactEmailHtml(p: EmailPayload): string {
               <p style="margin:0;font-size:12px;color:#6B6E7B;line-height:1.6;">
                 © ${new Date().getFullYear()} Clinentora · Intelligent IP Docketing<br/>
                 SCO 4, VIP Road, Zirakpur, SAS Nagar (Mohali), Punjab 140603<br/>
-                <a href="mailto:tamal@clinentora.com" style="color:#ACAFB9;text-decoration:none;">tamal@clinentora.com</a>
+                <a href="mailto:info@clinentora.com" style="color:#ACAFB9;text-decoration:none;">info@clinentora.com</a>
               </p>
             </td>
           </tr>
@@ -156,7 +156,7 @@ function buildDemoEmailHtml(p: EmailPayload): string {
               <p style="margin:0;font-size:12px;color:#6B6E7B;line-height:1.6;">
                 © ${new Date().getFullYear()} Clinentora · Intelligent IP Docketing<br/>
                 SCO 4, VIP Road, Zirakpur, SAS Nagar (Mohali), Punjab 140603<br/>
-                <a href="mailto:tamal@clinentora.com" style="color:#ACAFB9;text-decoration:none;">tamal@clinentora.com</a>
+                <a href="mailto:info@clinentora.com" style="color:#ACAFB9;text-decoration:none;">info@clinentora.com</a>
               </p>
             </td>
           </tr>

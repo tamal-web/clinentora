@@ -39,7 +39,7 @@ const products = [
 ];
 
 const navLinks = [
-  { name: "Services", href: "/contact" },
+  { name: "Services", href: "/services" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];

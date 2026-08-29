@@ -11,7 +11,7 @@ const productLinks = [
 const pageLinks = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
-  { title: "Services", href: "/contact" },
+  { title: "Services", href: "/services" },
   { title: "Contact", href: "/contact" },
 ];
 

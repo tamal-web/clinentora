@@ -135,10 +135,10 @@ const ContactForm = () => {
                 </div>
                 <div className="text-sm text-muted-foreground pt-4">
                   <a
-                    href="mailto:tamal@clinentora.com"
+                    href="mailto:info@clinentora.com"
                     className="hover:text-white transition-colors"
                   >
-                    tamal@clinentora.com
+                    info@clinentora.com
                   </a>
                 </div>
               </div>
