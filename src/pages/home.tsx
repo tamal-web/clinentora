@@ -23,7 +23,7 @@ const Home = () => {
         <title>Clinentora | AI-Powered Legal Management Platform</title>
         <meta
           name="description"
-          content="Clinentora provides AI-powered legal management platforms — Qlerkly and Legalis — helping law firms manage cases, contracts, documents, and deadlines in one place."
+          content="Clinentora provides AI-powered legal management platforms — Qlerkly and Lexora — helping law firms manage cases, contracts, documents, and deadlines in one place."
         />
       </Helmet>
       <Hero />
