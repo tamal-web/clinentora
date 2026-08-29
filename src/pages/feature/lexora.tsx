@@ -21,10 +21,10 @@ const LexoraPage = () => {
         productName="Lexora"
         productLogo="/logos/Lexora.png"
         tagline="Legal work on autopilot."
-        description="Lexora is an intelligent platform that automates case management, reads documents, manages contracts, and handles routine tasks — so your team can focus on higher-value work."
+        description="An intelligent docketing platform that automates case management, deadlines, and routine tasks to help legal teams work faster and more efficiently."
       />
-      <FeatureGrid />
-      <Features showAllFeatures={true} />
+      <FeatureGrid product="lexora" />
+      <Features product="lexora" />
       <FeatureIntegration />
       <ComparisonTable />
       <FeatureGrowth />

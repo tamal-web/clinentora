@@ -14,8 +14,8 @@ const FeatureIntegration = () => {
                         </h2>
                     </AnimateOnView>
                     <AnimateOnView blur delay={0.2}>
-                        <p className="text-muted-foreground text-lg">
-                            Our platforms integrate with your existing document storage, billing software, and case management systems — and connect directly to courts and legal authorities to keep your information accurate.
+                        <p className="text-muted-foreground">
+                            Connects to your document storage, billing software, and existing case tools — and syncs directly with courts and legal authorities.
                         </p>
                     </AnimateOnView>
                 </StaggerContainer>

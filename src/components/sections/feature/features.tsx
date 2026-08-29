@@ -29,9 +29,9 @@ const FeatureSection = ({
         </span>
       )}
       <h2 className="h3 text-white">{title}</h2>
-      <p className="text-muted-foreground leading-relaxed">{description}</p>
+      <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
       {bullets && bullets.length > 0 && (
-        <ul className="space-y-2 mt-2">
+        <ul className="space-y-2 mt-1">
           {bullets.map((b, i) => (
             <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
               <span className="text-primary mt-0.5">✓</span>
@@ -44,15 +44,11 @@ const FeatureSection = ({
   )
 
   const image = (
-    <div className="flex items-center justify-center rounded-2xl overflow-hidden border border-border bg-card/40 min-h-[260px]">
+    <div className="flex items-center justify-center rounded-2xl overflow-hidden border border-border bg-card/40 min-h-[240px]">
       {imageSrc ? (
-        <img
-          src={imageSrc}
-          alt={imageAlt || title}
-          className="w-full h-full object-cover"
-        />
+        <img src={imageSrc} alt={imageAlt || title} className="w-full h-full object-cover" />
       ) : (
-        <p className="text-muted-foreground text-sm p-8 text-center">Image placeholder — drop your screenshot here</p>
+        <p className="text-muted-foreground text-sm p-8 text-center">Screenshot coming soon</p>
       )}
     </div>
   )
@@ -74,98 +70,142 @@ const FeatureSection = ({
   )
 }
 
+// ─── Qlerkly feature sections ─────────────────────────────────────────────────
+
+const QlerklyFeatures = () => (
+  <section className="md:py-[60px] py-12 bg-background">
+    <Container className="space-y-20 md:space-y-32">
+
+      <FeatureSection
+        badge="Case Management"
+        title="All your cases, in one place"
+        description="Create matters, assign teams, and track every case from intake to close — no switching between tools."
+        bullets={[
+          "Full matter history, notes, and documents in one view",
+          "Assign tasks and track who's responsible",
+          "Status visible to the whole team instantly",
+        ]}
+        imagePosition="right"
+      />
+
+      <FeatureSection
+        badge="Deadline Tracking"
+        title="Never miss a critical date"
+        description="Manually log key dates and let Qlerkly surface what's coming up — so nothing slips through."
+        bullets={[
+          "Centralised deadline calendar per matter",
+          "Alert rules for upcoming and overdue dates",
+          "Reminders routed to the right team member",
+        ]}
+        imagePosition="left"
+      />
+
+      <FeatureSection
+        badge="Document Management"
+        title="Documents where you need them"
+        description="Upload, organise, and access every file tied to a matter — no more searching email threads."
+        bullets={[
+          "Files attached directly to matters and tasks",
+          "Version history and download access",
+          "Role-based visibility per team member",
+        ]}
+        imagePosition="right"
+      />
+
+      <FeatureSection
+        badge="Audit & Compliance"
+        title="Full control, always"
+        description="Every entry, edit, and change is logged. Your team reviews and approves before anything is saved."
+        bullets={[
+          "Permanent audit trail for every action",
+          "Human sign-off before entries go live",
+          "Export-ready logs for supervisory review",
+        ]}
+        imagePosition="left"
+      />
+
+    </Container>
+  </section>
+)
+
+// ─── Lexora feature sections ───────────────────────────────────────────────────
+
+const LexoraFeatures = () => (
+  <section className="md:py-[60px] py-12 bg-background">
+    <Container className="space-y-20 md:space-y-32">
+
+      <FeatureSection
+        badge="Agentic AI"
+        title="Tell it what to do. It handles the rest."
+        description="Type a request in plain language — the AI reads emails, extracts dates, runs workflows, and summarises documents."
+        bullets={[
+          "Natural language commands for any task",
+          "Reads incoming emails and pulls key information",
+          "Multi-step workflows without manual triggers",
+        ]}
+        imagePosition="right"
+      />
+
+      <FeatureSection
+        badge="E-Discovery"
+        title="Find anything, instantly"
+        description="Full-text search across every document, email, and case file. Surface evidence without manual review."
+        bullets={[
+          "Search across all uploaded documents",
+          "Filter by matter, date, type, or keyword",
+          "Instant results, no manual indexing",
+        ]}
+        imagePosition="left"
+      />
+
+      <FeatureSection
+        badge="Contract Lifecycle"
+        title="Contracts from draft to renewal"
+        description="Track every contract through drafting, review, signing, and expiry — with automatic alerts before anything lapses."
+        bullets={[
+          "Status visible at every contract stage",
+          "Alerts before expiry and renewal dates",
+          "All versions and approvals in one place",
+        ]}
+        imagePosition="right"
+      />
+
+      <FeatureSection
+        badge="Jurisdiction Integration"
+        title="Connected to courts and authorities"
+        description="Integrated with federal courts, state courts, and legal bodies. Deadline rules update automatically."
+        bullets={[
+          "Synced with local and international authorities",
+          "Rules update when they change — no manual work",
+          "Holiday and weekend adjustments handled",
+        ]}
+        imagePosition="left"
+      />
+
+      <FeatureSection
+        badge="Security & Privacy"
+        title="Your client data stays private"
+        description="Encrypted in transit and at rest. Role-based access and full audit logs — your data is never used to train shared models."
+        bullets={[
+          "Data never used for shared AI training",
+          "Role-based access per team member",
+          "Complete audit trail of every change",
+        ]}
+        imagePosition="right"
+      />
+
+    </Container>
+  </section>
+)
+
+// ─── Exported component ───────────────────────────────────────────────────────
+
 interface FeaturesProps {
-  showAllFeatures?: boolean
+  product: 'qlerkly' | 'lexora'
 }
 
-const Features = ({ showAllFeatures = true }: FeaturesProps) => {
-  return (
-    <section className="md:py-[60px] py-12 bg-background">
-      <Container className="space-y-20 md:space-y-32">
-
-        {/* Matter & Case Management */}
-        <FeatureSection
-          badge="Case Management"
-          title="All your cases, organised in one place"
-          description="Create matters, assign teams, upload documents, and track every case from intake to close — without switching between tools."
-          bullets={[
-            "Full matter history, notes, and documents in one view",
-            "Assign tasks and track who's responsible for what",
-            "Status updates visible to the whole team instantly",
-          ]}
-          imagePosition="right"
-        />
-
-        {/* Agentic AI */}
-        <FeatureSection
-          badge="Agentic AI"
-          title="Tell it what to do. It handles the rest."
-          description="Type a request in plain language — the AI reads emails, extracts dates, assigns tasks, triggers workflows, and summarises documents automatically."
-          bullets={[
-            "Natural language commands to automate any task",
-            "Reads incoming emails and pulls out key information",
-            "Runs multi-step workflows without manual triggers",
-          ]}
-          imagePosition="left"
-        />
-
-        {/* E-Discovery */}
-        <FeatureSection
-          badge="E-Discovery"
-          title="Find anything across all your matters"
-          description="Search every document, email, and case file instantly. Surface the right evidence without hours of manual review."
-          bullets={[
-            "Full-text search across all uploaded documents",
-            "Filter by matter, date range, document type, or keyword",
-            "Instant results — no waiting, no manual indexing",
-          ]}
-          imagePosition="right"
-        />
-
-        {/* Contract Lifecycle */}
-        <FeatureSection
-          badge="Contract Lifecycle Management"
-          title="Contracts from draft to renewal"
-          description="Track every contract in your firm — drafting, review, signing, and expiry. Get alerts before renewals so nothing lapses quietly."
-          bullets={[
-            "Contract status visible at every stage",
-            "Automatic alerts before expiry and renewal dates",
-            "All versions and approvals stored in one place",
-          ]}
-          imagePosition="left"
-        />
-
-        {/* Jurisdiction Integration */}
-        <FeatureSection
-          badge="Jurisdiction Integration"
-          title="Connected to courts and legal authorities"
-          description="Directly integrated with federal courts, state courts, and major legal bodies. Deadline rules update automatically — no manual maintenance needed."
-          bullets={[
-            "Synced with local and international legal authorities",
-            "Rules update automatically when they change",
-            "Holiday and weekend adjustments handled for you",
-          ]}
-          imagePosition="right"
-        />
-
-        {/* Security */}
-        {showAllFeatures && (
-          <FeatureSection
-            badge="Security & Privacy"
-            title="Your client data stays private"
-            description="All data is encrypted in transit and at rest. Role-based access, full audit logs, and daily backups ensure your firm's information is always protected."
-            bullets={[
-              "Your data is never used to train shared AI models",
-              "Role-based access — every team member sees only what they need",
-              "Complete audit trail of every change and access",
-            ]}
-            imagePosition="left"
-          />
-        )}
-
-      </Container>
-    </section>
-  )
+const Features = ({ product }: FeaturesProps) => {
+  return product === 'lexora' ? <LexoraFeatures /> : <QlerklyFeatures />
 }
 
 export default Features

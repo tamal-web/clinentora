@@ -21,10 +21,10 @@ const QlerklyPage = () => {
                 productName="Qlerkly"
                 productLogo="/logos/Qlerkly.png"
                 tagline="Case management made simple."
-                description="Qlerkly helps legal teams stay organised, track important dates, and manage cases with ease — without the complexity of enterprise software."
+                description="A reliable docketing platform that helps legal teams organise cases, track important dates, and manage deadlines with ease."
             />
-            <FeatureGrid />
-            <Features showAllFeatures={false} />
+            <FeatureGrid product="qlerkly" />
+            <Features product="qlerkly" />
             <FeatureIntegration />
             <ComparisonTable />
             <FeatureGrowth />

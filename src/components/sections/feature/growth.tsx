@@ -16,8 +16,7 @@ const FeatureGrowth = () => {
           </AnimateOnView>
           <AnimateOnView blur delay={0.2}>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              We handle your data migration, configuration, and onboarding — so
-              your team can hit the ground running without disruption.
+              We handle migration, configuration, and onboarding — so your team hits the ground running.
             </p>
           </AnimateOnView>
         </StaggerContainer>
@@ -28,26 +27,22 @@ const FeatureGrowth = () => {
               {
                 emoji: "📂",
                 title: "Data Migration",
-                description:
-                  "We import your existing cases, files, and records. Your history moves with you — nothing gets left behind.",
+                description: "Your cases, files, and records move with you.",
               },
               {
                 emoji: "⌨️",
                 title: "No Re-Entering Data",
-                description:
-                  "Your team never manually re-enters information that already exists. We handle the transfer.",
+                description: "We handle the transfer — no manual re-entry.",
               },
               {
                 emoji: "🔄",
                 title: "Run Both Systems in Parallel",
-                description:
-                  "Keep your current tools running alongside ours during the transition, so nothing falls through the cracks.",
+                description: "Keep your current tools running during transition.",
               },
               {
                 emoji: "👥",
                 title: "Dedicated Onboarding",
-                description:
-                  "A Clinentora specialist works with your team through setup, configuration, and go-live.",
+                description: "A specialist walks your team through go-live.",
               },
             ].map((item) => (
               <div
